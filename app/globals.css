@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Bloom Walk Taiwan 品牌色系 */
+  --color-bloom-green: #5B8C3E;
+  --color-bloom-green-light: #E8F0DE;
+  --color-bloom-green-dark: #3D6128;
+  --color-bloom-gold: #F4A83D;
+  --color-bloom-gold-light: #FFF3DC;
+  --color-bloom-pink: #E8657C;
+  --color-bloom-pink-light: #FDE8EC;
+  --color-bloom-sky: #A8D8EA;
+  --color-bloom-sky-light: #E8F4FA;
+  --color-bloom-cream: #FEFCF5;
+  --color-bloom-text: #2D3748;
+  --color-bloom-text-light: #6B7280;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #FEFCF5;
+  --foreground: #2D3748;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), "Noto Sans TC", system-ui, -apple-system, sans-serif;
+}
+
+/* 自訂動畫 */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease-out forwards;
+}
+
+.animate-fade-in-up-delay-1 {
+  opacity: 0;
+  animation: fade-in-up 0.7s ease-out 0.15s forwards;
+}
+
+.animate-fade-in-up-delay-2 {
+  opacity: 0;
+  animation: fade-in-up 0.7s ease-out 0.3s forwards;
+}
+
+.animate-fade-in-up-delay-3 {
+  opacity: 0;
+  animation: fade-in-up 0.7s ease-out 0.45s forwards;
 }
