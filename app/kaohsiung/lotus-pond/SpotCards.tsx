@@ -1,4 +1,4 @@
-﻿type Spot = {
+type Spot = {
   id: string;
   name: string;
   type: string;
