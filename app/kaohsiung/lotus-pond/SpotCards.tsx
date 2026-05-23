@@ -13,7 +13,7 @@ const defaultSpots: Spot[] = [
     name: "龍虎塔",
     type: "明信片 / 拍照點",
     desc: "蓮池潭代表地標，適合拍照與明信片收集。",
-    image: "",
+    image: "/maps/lotus-pond/longhu-tower.jpg",
     mapUrl: "",
   },
   {
@@ -21,7 +21,7 @@ const defaultSpots: Spot[] = [
     name: "春秋閣",
     type: "景點 / 步行路線",
     desc: "靠近湖岸步道，可接續龍虎塔安排散步。",
-    image: "",
+    image: "/maps/lotus-pond/chunqiu-pavilion.jpg",
     mapUrl: "",
   },
   {
@@ -29,7 +29,7 @@ const defaultSpots: Spot[] = [
     name: "元帝廟北極亭",
     type: "湖中景點",
     desc: "湖面視覺焦點，可作為路線中段停留點。",
-    image: "",
+    image: "/maps/lotus-pond/yuandi-temple.jpg",
     mapUrl: "",
   },
   {
@@ -37,7 +37,7 @@ const defaultSpots: Spot[] = [
     name: "蓮池潭環潭步道",
     type: "種花路線",
     desc: "適合 Pikmin Bloom 玩家規劃種花與散步。",
-    image: "",
+    image: "/maps/lotus-pond/lakeside-trail.jpg",
     mapUrl: "",
   },
   {
@@ -45,7 +45,7 @@ const defaultSpots: Spot[] = [
     name: "左營孔廟",
     type: "文化景點",
     desc: "蓮池潭東北側文化景點，適合半日遊延伸。",
-    image: "",
+    image: "/maps/lotus-pond/zuoying-temple.jpg",
     mapUrl: "",
   },
   {
@@ -53,7 +53,7 @@ const defaultSpots: Spot[] = [
     name: "蓮池潭",
     type: "湖泊",
     desc: "湖畔自然景觀，適合散步與親子路線。",
-    image: "",
+    image: "/maps/lotus-pond/lotus-pond.jpg",
     mapUrl: "",
   },
   {
@@ -61,7 +61,7 @@ const defaultSpots: Spot[] = [
     name: "蓮池潭兒童公園",
     type: "公園 / 休息",
     desc: "兒童遊憩場所，適合放風。",
-    image: "",
+    image: "/maps/lotus-pond/children-park.jpg",
     mapUrl: "",
   },
   {
@@ -69,7 +69,7 @@ const defaultSpots: Spot[] = [
     name: "洲仔濕地",
     type: "自然 / 公園",
     desc: "自然景觀，適合生態教育。",
-    image: "",
+    image: "/maps/lotus-pond/zhouzai-wetland.jpg",
     mapUrl: "",
   },
 ];
@@ -90,7 +90,7 @@ function SpotCard({ spot }: { spot: Spot }) {
           </div>
         )}
 
-        <span className="absolute left-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-sky-500 text-xs font-bold text-white shadow">
+        <span className="absolute left-2 top-2" style={{ width: 28, height: 28, borderRadius: '999px', background: '#2f8fd8', border: '3px solid white', color: 'white', fontWeight: 900, boxShadow: '0 4px 10px rgba(21,90,140,.24)', display: 'grid', placeItems: 'center' }}>
           {spot.id}
         </span>
       </div>

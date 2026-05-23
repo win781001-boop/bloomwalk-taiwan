@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { getRouteBySlug } from "@/lib/kaohsiung-routes";
 import { RouteDetailPage } from "../RouteDetailPage";
 import { SpotCards } from "./SpotCards";
@@ -115,10 +115,26 @@ export default function Page() {
                 <div
                   key={spot.id}
                   title={spot.name}
-                  className="absolute flex h-7 w-7 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-blue-500 text-xs font-bold text-white shadow-md"
-                  style={{ left: `${spot.left}%`, top: `${spot.top}%` }}
+                  className="absolute"
+                  style={{
+                    left: `${spot.left}%`,
+                    top: `${spot.top}%`,
+                    width: 32,
+                    height: 32,
+                    borderRadius: '999px 999px 999px 8px',
+                    transform: 'translate(-50%, -100%) rotate(-45deg)',
+                    border: '3px solid white',
+                    background: '#2f8fd8',
+                    color: 'white',
+                    fontWeight: 900,
+                    boxShadow: '0 8px 18px rgba(21,90,140,.32)',
+                    display: 'grid',
+                    placeItems: 'center',
+                  }}
                 >
-                  {spot.id}
+                  <span style={{ rotate: "45deg", display: "block" }}>
+                    {spot.id}
+                  </span>
                 </div>
               ))}
             </div>
@@ -136,4 +152,3 @@ export default function Page() {
     </div>
   );
 }
-
