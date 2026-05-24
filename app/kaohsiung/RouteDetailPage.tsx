@@ -52,13 +52,14 @@ function Section({
   );
 }
 
-export function RouteDetailPage({ route }: { route: KaohsiungRoute }) {
+export function RouteDetailPage({ route, hideHeader }: { route: KaohsiungRoute; hideHeader?: boolean }) {
   const nearby = route.nearbyRoutes
     .map((slug) => kaohsiungRoutes.find((r) => r.slug === slug))
     .filter(Boolean) as KaohsiungRoute[];
 
   return (
     <div className="flex flex-col flex-1">
+      {!hideHeader && (<>
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-bloom-green-light/60 bg-bloom-cream/85 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
@@ -72,10 +73,15 @@ export function RouteDetailPage({ route }: { route: KaohsiungRoute }) {
           </nav>
         </div>
       </header>
+      </>)}
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="bg-gradient-to-b from-bloom-sky-light via-bloom-cream to-bloom-cream px-4 pb-12 pt-20 sm:px-6 sm:pb-16 sm:pt-28">
+        <section className={
+  hideHeader
+    ? 'bg-gradient-to-b from-bloom-sky-light via-bloom-cream to-bloom-cream px-4 pb-12 sm:px-6 sm:pb-16 pt-6 sm:pt-10'
+    : 'bg-gradient-to-b from-bloom-sky-light via-bloom-cream to-bloom-cream px-4 pb-12 sm:px-6 sm:pb-16 pt-20 sm:pt-28'
+}>
           <div className="mx-auto max-w-3xl">
             <nav className="mb-6 text-xs text-bloom-text-light/60">
               <a href="/" className="hover:text-bloom-green">首頁</a>

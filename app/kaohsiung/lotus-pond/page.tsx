@@ -97,10 +97,25 @@ export default function Page() {
   if (!route) return null;
 
   return (
-    <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-6 px-4 py-8 lg:grid-cols-[minmax(0,1fr)_680px]">
+    <div className="flex flex-col">
+      {/* ── 全寬 Header ── */}
+      <header className="sticky top-0 z-50 border-b border-bloom-green-light/60 bg-bloom-cream/85 backdrop-blur-md">
+        <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-4 sm:px-6">
+          <a href="/" className="flex items-center gap-2.5 text-bloom-green-dark no-underline">
+            <span className="text-2xl" role="img" aria-hidden="true">🌼</span>
+            <span className="text-lg font-bold tracking-tight">Bloom Walk Taiwan</span>
+          </a>
+          <nav className="hidden gap-6 text-sm font-medium text-bloom-text-light sm:flex">
+            <a href="/map" className="transition-colors hover:text-bloom-green">探索地圖</a>
+            <a href="/kaohsiung/community-day" className="transition-colors hover:text-bloom-green">社群日</a>
+          </nav>
+        </div>
+      </header>
+
+      <div className="mx-auto grid w-full max-w-[1600px] grid-cols-1 gap-6 px-4 py-8 lg:grid-cols-[minmax(0,1fr)_680px]">
       {/* 手机版：卡片在主内容上方；桌机版：grid 自动推到右侧 */}
       <aside className="lg:order-2">
-        <div className="space-y-6 lg:mt-16">
+        <div className="space-y-6">
           {/* 上方：手繪地圖區 */}
           <div className="rounded-3xl bg-white p-4 shadow-xl">
             <h2 className="mb-4 text-lg font-bold text-bloom-text">蓮池潭地圖區</h2>
@@ -147,8 +162,9 @@ export default function Page() {
 
       {/* 主内容：桌面版在左侧，手机版在卡片下方 */}
       <div className="min-w-0 lg:order-1">
-        <RouteDetailPage route={route} />
+        <RouteDetailPage route={route} hideHeader />
       </div>
+    </div>
     </div>
   );
 }
