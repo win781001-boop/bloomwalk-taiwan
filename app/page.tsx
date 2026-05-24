@@ -252,7 +252,7 @@ const CARDS: EntryCard[] = [
     description: "先開放高雄路線，其他縣市將陸續整理。",
     icon: "🌸",
     bgColor: "#FDE8EC",
-    href: "/kaohsiung",
+    href: "/map",
     buttonLabel: "查看高雄路線",
   },
   {
