@@ -7,20 +7,27 @@ function spotBadge(index: number): string {
 }
 
 function SpotCard({ spot, index }: { spot: Spot; index: number }) {
+  const img = spot.imagePlaceholder ? (
+    <img
+      src={spot.imagePlaceholder}
+      alt={spot.name}
+      className="h-full w-full object-cover"
+    />
+  ) : (
+    <div className="flex h-full items-center justify-center text-xs font-medium text-slate-400">
+      尚未加入照片
+    </div>
+  );
+
   return (
     <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div className="relative aspect-[4/3] bg-slate-100">
-        {spot.imagePlaceholder ? (
-          <img
-            src={spot.imagePlaceholder}
-            alt={spot.name}
-            className="h-full w-full object-cover"
-          />
-        ) : (
-          <div className="flex h-full items-center justify-center text-xs font-medium text-slate-400">
-            尚未加入照片
-          </div>
-        )}
+      <a
+        href={spot.googleMapsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative block aspect-[4/3] bg-slate-100"
+      >
+        {img}
 
         <span
           className="absolute left-2 top-2"
@@ -39,7 +46,7 @@ function SpotCard({ spot, index }: { spot: Spot; index: number }) {
         >
           {spotBadge(index)}
         </span>
-      </div>
+      </a>
 
       <div className="p-3">
         <h3 className="text-sm font-bold leading-tight text-slate-800">
@@ -51,6 +58,15 @@ function SpotCard({ spot, index }: { spot: Spot; index: number }) {
         <p className="mt-2 line-clamp-2 text-xs leading-5 text-slate-400">
           {spot.notes}
         </p>
+
+        <a
+          href={spot.googleMapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 inline-block text-xs text-blue-500 hover:text-blue-700"
+        >
+          查看地圖 ↗
+        </a>
       </div>
     </article>
   );
