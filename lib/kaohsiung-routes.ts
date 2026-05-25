@@ -24,6 +24,7 @@ export type KaohsiungRoute = {
   supplies: string[];
   nearbyRoutes: string[];
   mapUrl: string;
+  spotIds?: string[];
 };
 
 export const kaohsiungRoutes: KaohsiungRoute[] = [
@@ -199,6 +200,7 @@ export const kaohsiungRoutes: KaohsiungRoute[] = [
       "可短暫休息的湖畔空間",
       "交通站點周邊",
     ],
+    spotIds: ["lotus-dragon-tiger-pagoda", "lotus-chunqiu-pavilion", "lotus-beiji-pavilion", "lotus-lakeside-trail", "lotus-zuoying-temple", "lotus-lotus-pond", "lotus-children-park", "lotus-zhouzai-wetland"],
     nearbyRoutes: ["central-park"],
     mapUrl: "https://www.google.com/maps/search/蓮池潭龍虎塔+高雄",
   },
@@ -298,3 +300,6 @@ export function getRouteBySlug(
 ): KaohsiungRoute | undefined {
   return kaohsiungRoutes.find((r) => r.slug === slug);
 }
+
+
+
