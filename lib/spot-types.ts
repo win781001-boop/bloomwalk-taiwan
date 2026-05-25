@@ -1,13 +1,18 @@
+ï»¿/** Allowed tag values for multi-entry filtering (postcardï¼walkï¼pikminï¼heritage). */
+export type SpotTag = "postcard" | "walk" | "pikmin" | "heritage";
+
 /** Shared Spot data structure used across all routes. */
 export interface Spot {
   id: string;
   name: string;
   city: string;
   district: string;
-  /** Categories describing what kind of place this is (e.g. "ºş²´", "ÎÄ»¯¾°üc"). */
+  /** Categories describing what kind of place this is (e.g. "æ¹–æ³Š", "æ–‡åŒ–æ™¯é»"). */
   typeTags: string[];
-  /** Suggested use cases for Pikmin Bloom players (e.g. "É¢²½", "Ã÷ĞÅÆ¬ÊÕ¼¯", "·N»¨"). */
+  /** Suggested use cases for Pikmin Bloom players (e.g. "æ•£æ­¥", "æ˜ä¿¡ç‰‡æ”¶é›†", "ç¨®èŠ±"). */
   useTags: string[];
+  /** Multi-entry filtering tags for future /tags/* pages. */
+  tags: SpotTag[];
   googleMapsUrl: string;
   suggestedStayMinutes: number;
   notes: string;
