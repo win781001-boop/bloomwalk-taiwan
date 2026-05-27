@@ -3,6 +3,7 @@ import { getRouteBySlug } from "@/lib/kaohsiung-routes";
 import { kaohsiungPier2Spots } from "@/lib/kaohsiung-spots";
 import RouteMapPageTemplate from "@/components/RouteMapPageTemplate";
 import { SpotCards } from "./SpotCards";
+import { Pier2MapSection } from "./Pier2MapSection";
 
 export const metadata: Metadata = {
   title: "高雄駁二皮克敏明信片散步路線｜文創港邊與拍照景點",
@@ -31,39 +32,7 @@ export default function Page() {
       route={route}
       mapTitle="駁二藝術特區地圖區"
       mapContent={
-        <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-slate-100">
-          <img
-            src="/maps/pier-2/map.png"
-            alt="駁二藝術特區手繪地圖"
-            className="h-full w-full object-contain"
-          />
-          {mapPins.map((pin) => (
-            <div
-              key={pin.id}
-              title={pin.name}
-              className="absolute"
-              style={{
-                left: `${pin.left}%`,
-                top: `${pin.top}%`,
-                width: 32,
-                height: 32,
-                borderRadius: "999px 999px 999px 8px",
-                transform: "translate(-50%, -100%) rotate(-45deg)",
-                border: "3px solid white",
-                background: "#2f8fd8",
-                color: "white",
-                fontWeight: 900,
-                boxShadow: "0 8px 18px rgba(21,90,140,.32)",
-                display: "grid",
-                placeItems: "center",
-              }}
-            >
-              <span style={{ rotate: "45deg", display: "block" }}>
-                {pin.shortId}
-              </span>
-            </div>
-          ))}
-        </div>
+        <Pier2MapSection pins={mapPins} spots={kaohsiungPier2Spots} />
       }
       spotCardsContent={<SpotCards spots={kaohsiungPier2Spots} />}
     />
