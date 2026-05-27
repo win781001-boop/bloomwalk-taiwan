@@ -6,7 +6,6 @@ import type { Spot } from "@/lib/spot-types";
 interface MapPin {
   id: string;
   shortId: string;
-  name: string;
   left: number;
   top: number;
 }
@@ -119,7 +118,7 @@ export function Pier2MapSection({
             />
           )}
 
-          {/* Preview card — fully pointer-events-none so hover stays on map/pins */}
+          {/* Preview card — full pointer-events-none, hover stays on map/pins */}
           <div className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none">
             <div className="w-56 overflow-hidden rounded-xl bg-white shadow-lg pointer-events-none">
               <div className="aspect-[4/3] bg-slate-100">
