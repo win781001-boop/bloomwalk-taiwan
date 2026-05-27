@@ -68,7 +68,8 @@ export const kaohsiungRoutes: KaohsiungRoute[] = [
       "便利商店",
       "公共廁所",
       "港邊可短暫休息空間",
-    ],
+    ],    spotIds: ["pier2-A", "pier2-B", "pier2-C", "pier2-D", "pier2-E", "pier2-F", "pier2-G", "pier2-H"],
+
     nearbyRoutes: ["haramasen-railway", "sizihwan"],
     mapUrl: "https://www.google.com/maps/search/駁二藝術特區+高雄",
   },
@@ -300,6 +301,7 @@ export function getRouteBySlug(
 ): KaohsiungRoute | undefined {
   return kaohsiungRoutes.find((r) => r.slug === slug);
 }
+
 
 
 
