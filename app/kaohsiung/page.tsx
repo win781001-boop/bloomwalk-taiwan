@@ -1,4 +1,4 @@
-import { kaohsiungRoutes } from "@/lib/kaohsiung-routes";
+﻿import { kaohsiungRoutes } from "@/lib/kaohsiung-routes";
 import type { KaohsiungRoute } from "@/lib/kaohsiung-routes";
 
 /* ── 评分条 ──────────────────────────────── */
@@ -93,7 +93,7 @@ export default function KaohsiungPage() {
         {/* Route cards */}
         <section className="bg-bloom-cream px-4 pb-24 sm:px-6 sm:pb-32">
           <div className="mx-auto max-w-3xl space-y-6">
-            {kaohsiungRoutes.map((route) => (
+            {kaohsiungRoutes.filter(r => r.status !== "draft").map((route) => (
               <Card key={route.slug} route={route} />
             ))}
           </div>
@@ -231,3 +231,4 @@ function Card({ route }: { route: KaohsiungRoute }) {
     </div>
   );
 }
+

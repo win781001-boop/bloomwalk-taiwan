@@ -4,6 +4,8 @@ import RouteMapPageTemplate from "@/components/RouteMapPageTemplate";
 import { SpotCards } from "./SpotCards";
 
 export const metadata: Metadata = {
+  robots: { index: false },
+
   title: "高雄中央公園皮克敏散步路線｜捷運可達短時間補步數",
   description:
     "高雄中央公園皮克敏散步路線，適合短時間補步數、捷運可達、傍晚散步與社群日備案。",
