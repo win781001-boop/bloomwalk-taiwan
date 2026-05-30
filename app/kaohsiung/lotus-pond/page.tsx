@@ -3,6 +3,7 @@ import { getRouteBySlug } from "@/lib/kaohsiung-routes";
 import { kaohsiungLotusPondSpots } from "@/lib/kaohsiung-spots";
 import RouteMapPageTemplate from "@/components/RouteMapPageTemplate";
 import { SpotCards } from "./SpotCards";
+import { LotusPondMapSection } from "./LotusPondMapSection";
 
 export const metadata: Metadata = {
   title: "高雄蓮池潭龍虎塔皮克敏明信片路線｜湖景與經典地標",
@@ -31,39 +32,7 @@ export default function Page() {
       route={route}
       mapTitle="蓮池潭地圖區"
       mapContent={
-        <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-slate-100">
-          <img
-            src="/maps/lianchihtan.png"
-            alt="蓮池潭手繪地圖"
-            className="h-full w-full object-contain"
-          />
-          {mapPins.map((pin) => (
-            <div
-              key={pin.id}
-              title={pin.name}
-              className="absolute"
-              style={{
-                left: `${pin.left}%`,
-                top: `${pin.top}%`,
-                width: 32,
-                height: 32,
-                borderRadius: "999px 999px 999px 8px",
-                transform: "translate(-50%, -100%) rotate(-45deg)",
-                border: "3px solid white",
-                background: "#2f8fd8",
-                color: "white",
-                fontWeight: 900,
-                boxShadow: "0 8px 18px rgba(21,90,140,.32)",
-                display: "grid",
-                placeItems: "center",
-              }}
-            >
-              <span style={{ rotate: "45deg", display: "block" }}>
-                {pin.shortId}
-              </span>
-            </div>
-          ))}
-        </div>
+        <LotusPondMapSection pins={mapPins} spots={kaohsiungLotusPondSpots} />
       }
       spotCardsContent={<SpotCards spots={kaohsiungLotusPondSpots} />}
     />
