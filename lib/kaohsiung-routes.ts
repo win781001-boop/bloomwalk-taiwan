@@ -139,6 +139,7 @@ export const kaohsiungRoutes: KaohsiungRoute[] = [
       "海景周邊休息點",
     ],
     nearbyRoutes: ["haramasen-railway", "pier-2"],
+    spotIds: ["sizihwan-A", "sizihwan-B", "sizihwan-C", "sizihwan-D", "sizihwan-E", "sizihwan-F", "sizihwan-G", "sizihwan-H"],
     mapUrl: "https://www.google.com/maps/search/西子灣+高雄",
   },
   {
