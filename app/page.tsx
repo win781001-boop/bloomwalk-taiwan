@@ -1,4 +1,4 @@
-export default function Home() {
+﻿export default function Home() {
   return (
     <div className="flex flex-col flex-1">
       {/* ═══════════════════════════════════════════
@@ -187,7 +187,7 @@ export default function Home() {
                 <span className="text-lg" role="img" aria-hidden="true">
                   🌸
                 </span>
-                高雄中央公園散步路線
+                蓮池潭、西子灣、駁二哈瑪星等散步路線
               </li>
               <li className="flex items-center gap-3 rounded-xl border border-bloom-green-light/50 bg-white/80 px-5 py-3 text-sm text-bloom-text">
                 <span className="text-lg" role="img" aria-hidden="true">
@@ -267,7 +267,7 @@ const CARDS: EntryCard[] = [
   {
     title: "熱門散步景點",
     description:
-      "從高雄中央公園、駁二等熱門景點開始，慢慢補上全台適合散步的地點。",
+      "從蓮池潭、西子灣、駁二等熱門景點開始，慢慢補上全台適合散步的地點。",
     icon: "🌿",
     bgColor: "#E8F4FA",
     href: "/kaohsiung",
