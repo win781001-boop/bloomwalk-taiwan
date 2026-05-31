@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { keelungRoutes } from "@/lib/keelung-routes";
 import type { RouteData } from "@/lib/route-types";
 import SiteHeader from "@/components/SiteHeader";
+import { categoryIconMap, categoryNames } from "@/lib/category-icons";
 
 export const metadata: Metadata = { robots: { index: false } };
 
@@ -56,8 +57,8 @@ function Card({ route }: { route: RouteData }) {
   return (
     <div className="rounded-2xl border border-bloom-green-light/50 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md sm:p-7">
       <div className="flex items-start gap-4">
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl text-2xl sm:h-14 sm:w-14 sm:text-3xl" style={{ backgroundColor: "#E8F0DE" }}>
-          <span role="img" aria-hidden="true">{route.icon}</span></div>
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl sm:h-14 sm:w-14" style={{ backgroundColor: "#E8F0DE" }}>
+          <img src={categoryIconMap[route.primaryCategory]} alt={categoryNames[route.primaryCategory]} className="h-9 w-9 object-contain sm:h-11 sm:w-11" /></div>
         <div className="min-w-0 flex-1">
           <h2 className="text-lg font-bold tracking-tight text-bloom-text sm:text-xl">{route.name}</h2>
           <p className="mt-0.5 text-xs font-medium text-bloom-green">{route.area}</p>

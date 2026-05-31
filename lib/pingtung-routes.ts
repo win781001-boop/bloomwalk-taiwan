@@ -1,7 +1,6 @@
-/* Pingtung route data --- shared data file
-   Used by /pingtung listing page and individual route pages
-   NOTE: Skeleton data only. Real content will be added after approval.
-*/
+import type { RouteCategory } from "./category-icons";
+
+
 
 export type PingtungRoute = {
   slug: string;
@@ -17,6 +16,7 @@ export type PingtungRoute = {
   transport: string;
   tags: string[];
   icon: string;
+  primaryCategory: RouteCategory;
   whyVisit: string;
   routeSteps: string[];
   pikminReasons: string[];
@@ -29,6 +29,7 @@ export type PingtungRoute = {
 export const pingtungRoutes: PingtungRoute[] = [
   {
     slug: "dapeng-bay",
+    primaryCategory: "coast",
     name: "大鵬灣環灣散步路線",
     area: "屏東 / 待補充",
     summary: "潟湖、水岸、跨海橋",
@@ -51,6 +52,7 @@ export const pingtungRoutes: PingtungRoute[] = [
   },
   {
     slug: "donggang-harbor",
+    primaryCategory: "heritage",
     name: "東港漁港・東隆宮街區路線",
     area: "屏東 / 待補充",
     summary: "漁港、廟宇、美食街區",
@@ -73,6 +75,7 @@ export const pingtungRoutes: PingtungRoute[] = [
   },
   {
     slug: "victory-star-village",
+    primaryCategory: "heritage",
     name: "勝利星村眷村文化路線",
     area: "屏東 / 待補充",
     summary: "歷史建築、文創、城市散步",
@@ -95,6 +98,7 @@ export const pingtungRoutes: PingtungRoute[] = [
   },
   {
     slug: "eluanbi-park",
+    primaryCategory: "coast",
     name: "墾丁鵝鑾鼻海岸公園路線",
     area: "屏東 / 待補充",
     summary: "燈塔、草地、海岸景觀",
@@ -117,6 +121,7 @@ export const pingtungRoutes: PingtungRoute[] = [
   },
   {
     slug: "xiaoliuqiu-vase-rock",
+    primaryCategory: "coast",
     name: "小琉球花瓶岩海岸路線",
     area: "屏東 / 待補充",
     summary: "離島海岸、地標、步行",
@@ -139,6 +144,7 @@ export const pingtungRoutes: PingtungRoute[] = [
   },
   {
     slug: "linhousilin-forest-park",
+    primaryCategory: "mountain",
     name: "林後四林平地森林路線",
     area: "屏東 / 待補充",
     summary: "森林、公園、平坦綠地",

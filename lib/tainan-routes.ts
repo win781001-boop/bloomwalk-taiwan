@@ -1,6 +1,6 @@
-/* Tainan route data --- shared data file
-   Used by /tainan listing page and individual route pages
-*/
+import type { RouteCategory } from "./category-icons";
+
+
 
 export type TainanRoute = {
   slug: string;
@@ -16,6 +16,7 @@ export type TainanRoute = {
   transport: string;
   tags: string[];
   icon: string;
+  primaryCategory: RouteCategory;
   whyVisit: string;
   routeSteps: string[];
   pikminReasons: string[];
@@ -28,6 +29,7 @@ export type TainanRoute = {
 export const tainanRoutes: TainanRoute[] = [
   {
     slug: "anping-old-fort",
+    primaryCategory: "heritage",
     name: "安平古堡・老街・樹屋散步路線",
     area: "臺南 / 安平區",
     summary: "古蹟、老街、巷弄、樹屋、港區文化",
@@ -50,6 +52,7 @@ export const tainanRoutes: TainanRoute[] = [
   },
   {
     slug: "chihkan-old-town",
+    primaryCategory: "heritage",
     name: "赤崁樓・祀典武廟府城古蹟路線",
     area: "臺南 / 中西區",
     summary: "赤崁樓、祀典武廟、大天后宮、傳統街區",
@@ -72,6 +75,7 @@ export const tainanRoutes: TainanRoute[] = [
   },
   {
     slug: "shennong-haian-hele",
+    primaryCategory: "night",
     name: "神農街・海安路・河樂廣場夜間路線",
     area: "臺南 / 中西區",
     summary: "老屋巷弄、藝術街、夜間散步、美食",
@@ -94,6 +98,7 @@ export const tainanRoutes: TainanRoute[] = [
   },
   {
     slug: "chimei-metropolitan-park",
+    primaryCategory: "museum",
     name: "奇美博物館・臺南都會公園路線",
     area: "臺南 / 仁德區",
     summary: "博物館、湖景、草地、開闊步道",
@@ -116,6 +121,7 @@ export const tainanRoutes: TainanRoute[] = [
   },
   {
     slug: "shuijiaoshe-zhuxi",
+    primaryCategory: "park",
     name: "水交社・竹溪水岸・哈赫拿爾森林路線",
     area: "臺南 / 南區",
     summary: "眷村文化、都市森林、水岸步道、生態",
@@ -138,6 +144,7 @@ export const tainanRoutes: TainanRoute[] = [
   },
   {
     slug: "blueprint-art-museum",
+    primaryCategory: "museum",
     name: "藍晒圖・臺南美術館・孔廟文化路線",
     area: "臺南 / 中西區",
     summary: "文創、藝術館舍、古城街區、文化散步",

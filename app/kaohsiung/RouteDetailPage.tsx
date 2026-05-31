@@ -5,6 +5,7 @@
 
 import type { KaohsiungRoute } from "@/lib/kaohsiung-routes";
 import { kaohsiungRoutes } from "@/lib/kaohsiung-routes";
+import { categoryIconMap, categoryNames } from "@/lib/category-icons";
 
 function RatingBar({
   value,
@@ -93,10 +94,10 @@ export function RouteDetailPage({ route, hideHeader }: { route: KaohsiungRoute; 
 
             <div className="flex items-start gap-4">
               <div
-                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-3xl sm:h-16 sm:w-16 sm:text-4xl"
+                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl sm:h-16 sm:w-16"
                 style={{ backgroundColor: "#E8F0DE" }}
               >
-                <span role="img" aria-hidden="true">{route.icon}</span>
+                <img src={categoryIconMap[route.primaryCategory]} alt={categoryNames[route.primaryCategory]} className="h-10 w-10 object-contain sm:h-12 sm:w-12" />
               </div>
               <div>
                 <h1 className="text-2xl font-extrabold tracking-tight text-bloom-text sm:text-4xl">
@@ -224,7 +225,7 @@ export function RouteDetailPage({ route, hideHeader }: { route: KaohsiungRoute; 
                       href={`/kaohsiung/${r.slug}`}
                       className="flex items-center gap-3 rounded-xl border border-bloom-green-light/40 bg-white px-4 py-3 text-sm font-medium text-bloom-text transition-all duration-300 hover:border-bloom-green hover:shadow-sm"
                     >
-                      <span className="text-lg" role="img" aria-hidden="true">{r.icon}</span>
+                      <img src={categoryIconMap[r.primaryCategory]} alt={categoryNames[r.primaryCategory]} className="h-6 w-6 object-contain" />
                       {r.name}
                       <svg className="ml-auto h-3.5 w-3.5 text-bloom-green" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />

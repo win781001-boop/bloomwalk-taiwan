@@ -1,3 +1,5 @@
+import type { RouteCategory } from "./category-icons";
+
 /* Shared route data type used by all skeleton counties */
 
 export interface RouteData {
@@ -14,6 +16,7 @@ export interface RouteData {
   transport: string;
   tags: string[];
   icon: string;
+  primaryCategory: RouteCategory;
   whyVisit: string;
   routeSteps: string[];
   pikminReasons: string[];

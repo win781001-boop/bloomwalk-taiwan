@@ -3,6 +3,8 @@
    用于 /kaohsiung 列表页与各单一路线页
    ═══════════════════════════════════════════ */
 
+import type { RouteCategory } from "./category-icons";
+
 export type KaohsiungRoute = {
   slug: string;
   name: string;
@@ -17,6 +19,7 @@ export type KaohsiungRoute = {
   transport: string;
   tags: string[];
   icon: string;
+  primaryCategory: RouteCategory;
   whyVisit: string;
   routeSteps: string[];
   pikminReasons: string[];
@@ -44,6 +47,7 @@ export const kaohsiungRoutes: KaohsiungRoute[] = [
     transport: "輕軌可達（駁二大義站 / 駁二蓬萊站）",
     tags: ["港邊", "文創", "拍照", "輕軌可達", "觀光"],
     icon: "🎨",
+    primaryCategory: "waterfront",
     whyVisit:
       "駁二藝術特區有倉庫群、港邊、藝術裝置與輕軌元素，是高雄辨識度很高的散步景點。對皮克敏玩家來說，這裡適合邊走邊收集景點明信片，也適合拍照與順遊鹽埕港邊。",
     routeSteps: [
@@ -90,6 +94,7 @@ export const kaohsiungRoutes: KaohsiungRoute[] = [
     transport: "捷運橋頭糖廠站（R22A），出站步行約 5 分鐘",
     tags: ["歷史", "糖廠", "日式建築", "拍照", "捷運可達", "散步"],
     icon: "🏭",
+    primaryCategory: "industry",
     whyVisit:
       "橋頭糖廠是台灣第一座現代化糖廠，園區內保留了日式宿舍、紅磚倉庫、鐵道景觀與防空洞等歷史遺跡。對皮克敏玩家來說，這裡景點集中、範圍適中，適合半日散步收集具有糖業文化特色的明信片，捷運直達也讓交通門檻很低。",
     routeSteps: [
@@ -138,6 +143,7 @@ export const kaohsiungRoutes: KaohsiungRoute[] = [
     transport: "捷運西子灣站，步行約 15～20 分鐘",
     tags: ["夕陽", "海景", "觀光", "半日", "拍照"],
     icon: "🌅",
+    primaryCategory: "coast",
     whyVisit:
       "西子灣是高雄經典海景與夕陽景點，適合安排半日散步。對皮克敏玩家來說，這裡的海景、港口與夕陽畫面很有明信片吸引力。",
     routeSteps: [
@@ -183,6 +189,7 @@ export const kaohsiungRoutes: KaohsiungRoute[] = [
     transport: "捷運左營站，步行約 15～20 分鐘；或台鐵左營站",
     tags: ["湖景", "地標", "傳統", "觀光", "長走"],
     icon: "🐉",
+    primaryCategory: "heritage",
     whyVisit:
       "蓮池潭與龍虎塔是高雄經典地標，湖景和傳統建築辨識度高。這條路線適合想收集具有台灣感景點明信片的玩家，也適合安排較長時間慢走。",
     routeSteps: [
@@ -228,6 +235,7 @@ export const kaohsiungRoutes: KaohsiungRoute[] = [
     transport: "?",
     tags: [],
     icon: "??",
+    primaryCategory: "railway",
     whyVisit: "",
     routeSteps: [],
     pikminReasons: [],
@@ -251,6 +259,7 @@ export const kaohsiungRoutes: KaohsiungRoute[] = [
     transport: "高雄市區開車或騎車約 20～30 分鐘可達；公車 70、紅 70、217 等路線",
     tags: ["湖景", "地標", "公園", "散步", "拍照", "半日"],
     icon: "🏞️",
+    primaryCategory: "park",
     whyVisit: "澄清湖的特色不是單一景點，而是湖面、曲橋、亭台、樹蔭與展望景色可以連續收集。九曲橋與雙蓮亭具有明顯的中式湖景氛圍，中興塔與三亭攬勝則讓路線增加遠望湖區與停留休息的節奏，是高雄市區周邊適合安排半日散步的綠地型路線。",
     routeSteps: [
       "從海洋奇珍園周邊開始，先進入澄清湖湖區散步氛圍。",
@@ -297,6 +306,7 @@ export const kaohsiungRoutes: KaohsiungRoute[] = [
     transport: "鼓山渡輪站搭渡輪至旗津，或開車經過港隧道",
     tags: ["海景", "渡輪", "老街", "歷史", "拍照", "半日"],
     icon: "🏖️",
+    primaryCategory: "coast",
     whyVisit:
       "旗津是高雄最具代表性的離島沙洲，搭渡輪本身就是一趟風景。從渡輪站出發，可以走訪天后宮、老街、燈塔、星空隧道與旗後砲台，再到海邊欣賞台灣海峽。對皮克敏玩家來說，這裡景點密集、路線清楚，很適合半日散步收集明信片。",
     routeSteps: [
@@ -340,7 +350,3 @@ export function getRouteBySlug(
 ): KaohsiungRoute | undefined {
   return kaohsiungRoutes.find((r) => r.slug === slug);
 }
-
-
-
-

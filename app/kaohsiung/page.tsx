@@ -1,6 +1,7 @@
 ﻿import { kaohsiungRoutes } from "@/lib/kaohsiung-routes";
 import type { KaohsiungRoute } from "@/lib/kaohsiung-routes";
 
+import { categoryIconMap, categoryNames } from "@/lib/category-icons";
 /* ── 评分条 ──────────────────────────────── */
 
 function RatingBar({
@@ -130,17 +131,22 @@ function Card({ route }: { route: KaohsiungRoute }) {
     <div className="rounded-2xl border border-bloom-green-light/50 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md sm:p-7">
       <div className="flex items-start gap-4">
         <div
-          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl text-2xl sm:h-14 sm:w-14 sm:text-3xl"
+          className="flex h-[84px] w-[84px] shrink-0 items-center justify-center rounded-2xl"
           style={{ backgroundColor: "#E8F0DE" }}
         >
-          <span role="img" aria-hidden="true">
-            {route.icon}
-          </span>
+          <img
+            src={categoryIconMap[route.primaryCategory]}
+            alt={categoryNames[route.primaryCategory]}
+            className="h-[60px] w-[60px] object-contain"
+          />
         </div>
         <div className="min-w-0 flex-1">
-          <h2 className="text-lg font-bold tracking-tight text-bloom-text sm:text-xl">
+          <a
+            href={`/kaohsiung/${route.slug}`}
+            className="text-lg font-bold tracking-tight text-bloom-text sm:text-xl hover:underline hover:opacity-70 transition-all"
+          >
             {route.name}
-          </h2>
+          </a>
           <p className="mt-0.5 text-xs font-medium text-bloom-green">
             {route.area}
           </p>
@@ -207,27 +213,6 @@ function Card({ route }: { route: KaohsiungRoute }) {
         ))}
       </div>
 
-      <div className="mt-5">
-        <a
-          href={`/kaohsiung/${route.slug}`}
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-bloom-green transition-all duration-300 hover:gap-2.5 hover:text-bloom-green-dark"
-        >
-          查看路線
-          <svg
-            className="h-3.5 w-3.5 transition-transform duration-300"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2.5}
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </a>
-      </div>
     </div>
   );
 }
