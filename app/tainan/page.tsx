@@ -59,7 +59,7 @@ export default function TainanPage() {
         </section>
 
         <section className="bg-bloom-cream px-4 pb-24 sm:px-6 sm:pb-32">
-          <div className="mx-auto max-w-3xl space-y-6">
+          <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-6">
             {tainanRoutes.map((route) => (
               <Card key={route.slug} route={route} />
             ))}
