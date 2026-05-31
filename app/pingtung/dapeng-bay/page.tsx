@@ -4,7 +4,7 @@ import PingtungRouteMapPageTemplate from "@/components/PingtungRouteMapPageTempl
 import { SpotCards } from "./SpotCards";
 
 export const metadata: Metadata = {
-  title: "大鵬灣環灣散步路線 | Bloom Walk Taiwan",
+  title: "大鵬灣環灣散步路線 | Bloom Walk",
   description:
     "大鵬灣散步路線，適合皮克敏玩家收集屏東景點明信片、散步種花。",
 };

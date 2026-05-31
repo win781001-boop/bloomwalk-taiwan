@@ -76,7 +76,7 @@ export default function Page() {
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 text-center">
           <div className="flex items-center gap-2 text-sm text-bloom-text-light">
             <span role="img" aria-hidden="true">🌼</span>
-            <span>Bloom Walk Taiwan</span>
+            <span>Bloom Walk</span>
           </div>
           <p className="max-w-lg text-xs leading-relaxed text-bloom-text-light/60">
             BloomWalk 是玩家自製的散步路線整理網站，非官方網站，與 Nintendo、
@@ -84,7 +84,7 @@ export default function Page() {
             與場地狀況請以官方公告及現場資訊為準。
           </p>
           <p className="text-xs text-bloom-text-light/50">
-            &copy; {new Date().getFullYear()} Bloom Walk Taiwan.
+            &copy; {new Date().getFullYear()} Bloom Walk.
           </p>
         </div>
       </footer>

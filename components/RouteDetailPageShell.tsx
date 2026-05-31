@@ -68,7 +68,7 @@ export default function RouteDetailPageShell({
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
           <a href="/" className="flex items-center gap-2.5 text-bloom-green-dark no-underline">
             <span className="text-2xl" role="img" aria-hidden="true">🌼</span>
-            <span className="text-lg font-bold tracking-tight">Bloom Walk Taiwan</span>
+            <span className="text-lg font-bold tracking-tight">Bloom Walk</span>
           </a>
           <nav className="hidden gap-6 text-sm font-medium text-bloom-text-light sm:flex">
             <a href="/map" className="transition-colors hover:text-bloom-green">探索地圖</a>
@@ -253,7 +253,7 @@ export default function RouteDetailPageShell({
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 text-center">
           <div className="flex items-center gap-2 text-sm text-bloom-text-light">
             <span role="img" aria-hidden="true">🌼</span>
-            <span>Bloom Walk Taiwan</span>
+            <span>Bloom Walk</span>
           </div>
           <p className="max-w-lg text-xs leading-relaxed text-bloom-text-light/60">
             BloomWalk 是玩家自製的散步路線整理網站，非官方網站，與 Nintendo、
@@ -261,7 +261,7 @@ export default function RouteDetailPageShell({
             與場地狀況請以官方公告及現場資訊為準。
           </p>
           <p className="text-xs text-bloom-text-light/50">
-            &copy; {new Date().getFullYear()} Bloom Walk Taiwan.
+            &copy; {new Date().getFullYear()} Bloom Walk.
           </p>
         </div>
       </footer>

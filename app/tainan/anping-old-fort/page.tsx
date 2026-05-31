@@ -4,7 +4,7 @@ import TainanRouteMapPageTemplate from "@/components/TainanRouteMapPageTemplate"
 import { SpotCards } from "./SpotCards";
 
 export const metadata: Metadata = {
-  title: "安平古堡 | Bloom Walk Taiwan",
+  title: "安平古堡 | Bloom Walk",
   description:
     "安平古堡散步路線，適合皮克敏玩家收集臺南景點明信片、散步種花。",
 };

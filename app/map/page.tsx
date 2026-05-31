@@ -12,11 +12,11 @@ export default function MapPage() {
             {/* Page header */}
             <div className="mx-auto mb-14 max-w-3xl text-center">
               <h1 className="text-3xl font-extrabold tracking-tight text-bloom-text sm:text-5xl">
-                全臺皮克敏散步地圖
+                散步路線地圖
               </h1>
               <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-bloom-text-light sm:text-lg">
-                BloomWalk Taiwan
-                正在逐一整理全臺適合皮克敏玩家散步、種花與社群日活動的景區路線。
+                BloomWalk
+                正在逐一整理適合散步、種花與社群日活動的景區路線。
                 各縣市路線骨架已預留，內容將在後續更新中陸續上線。
               </p>
             </div>
@@ -83,7 +83,7 @@ export default function MapPage() {
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 text-center">
           <div className="flex items-center gap-2 text-sm text-bloom-text-light">
             <span role="img" aria-hidden="true">🌼</span>
-            <span>Bloom Walk Taiwan</span>
+            <span>Bloom Walk</span>
           </div>
           <p className="max-w-lg text-xs leading-relaxed text-bloom-text-light/60">
             BloomWalk 是玩家自製的散步路線整理網站，非官方網站，與 Nintendo、
@@ -91,7 +91,7 @@ export default function MapPage() {
             與場地狀況請以官方公告及現場資訊為準。
           </p>
           <p className="text-xs text-bloom-text-light/50">
-            &copy; {new Date().getFullYear()} Bloom Walk Taiwan.
+            &copy; {new Date().getFullYear()} Bloom Walk.
           </p>
         </div>
       </footer>

@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bloom Walk Taiwan — 台灣皮克敏散步種花地圖",
+  title: "Bloom Walk — 散步種花路線地圖",
   description:
-    "整理台灣各縣市適合散步、種花、社群日活動與附近餐飲補給的皮克敏 Bloom 玩家地圖。",
+    "整理各縣市適合散步、種花、社群日活動與附近餐飲補給的散步路線地圖。",
   openGraph: {
-    title: "Bloom Walk Taiwan — 台灣皮克敏散步種花地圖",
+    title: "Bloom Walk — 散步種花路線地圖",
     description:
-      "整理台灣各縣市適合散步、種花、社群日活動與附近餐飲補給的皮克敏 Bloom 玩家地圖。",
+      "整理各縣市適合散步、種花、社群日活動與附近餐飲補給的散步路線地圖。",
     type: "website",
     locale: "zh_TW",
   },

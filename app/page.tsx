@@ -11,7 +11,7 @@
             <span className="text-2xl" role="img" aria-hidden="true">
               🌼
             </span>
-            <span className="text-lg font-bold tracking-tight">Bloom Walk Taiwan</span>
+            <span className="text-lg font-bold tracking-tight">Bloom Walk</span>
           </a>
 
           {/* Nav links */}
@@ -65,23 +65,21 @@
           <div className="relative mx-auto max-w-3xl text-center">
             {/* Site name */}
             <p className="animate-fade-in-up text-sm font-semibold uppercase tracking-[0.25em] text-bloom-green">
-              Bloom Walk Taiwan
+              WEEKEND BLOOM MAP
             </p>
 
             {/* Main heading */}
             <h1 className="animate-fade-in-up-delay-1 mt-5 text-3xl font-extrabold leading-tight tracking-tight text-bloom-text sm:text-5xl sm:leading-tight">
-              台灣皮克敏玩家的
+              假日放電、散步、種花的
               <br />
-              <span className="text-bloom-green">散步</span>、
-              <span className="text-bloom-pink">種花</span>與
-              <span className="text-bloom-gold">補給</span>地圖
+              <span className="text-bloom-green">旅遊</span>地圖
             </h1>
 
             {/* Sub-heading */}
             <p className="animate-fade-in-up-delay-2 mx-auto mt-6 max-w-xl text-base leading-relaxed text-bloom-text-light sm:text-lg">
-              先從高雄開始，整理適合皮克敏玩家散步、種花、補步數與社群日活動的景區路線，
+              整理適合假日出門、輕鬆散步、順路種花與補給的景區路線，
               <br className="hidden sm:block" />
-              未來逐步補上全台地點。
+              從城市、公園、港邊與老街開始，慢慢補齊更多地點。
             </p>
 
             {/* CTA */}
@@ -216,7 +214,7 @@
             <span role="img" aria-hidden="true">
               🌼
             </span>
-            <span>Bloom Walk Taiwan</span>
+            <span>Bloom Walk</span>
           </div>
 
           {/* Disclaimer */}
@@ -227,7 +225,7 @@
           </p>
 
           <p className="text-xs text-bloom-text-light/50">
-            © {new Date().getFullYear()} Bloom Walk Taiwan.
+            © {new Date().getFullYear()} Bloom Walk.
           </p>
         </div>
       </footer>
@@ -248,7 +246,7 @@ type EntryCard = {
 
 const CARDS: EntryCard[] = [
   {
-    title: "全台種花地圖",
+    title: "種花散步地圖",
     description: "先開放高雄路線，其他縣市將陸續整理。",
     icon: "🌸",
     bgColor: "#FDE8EC",
@@ -267,7 +265,7 @@ const CARDS: EntryCard[] = [
   {
     title: "熱門散步景點",
     description:
-      "從蓮池潭、西子灣、駁二等熱門景點開始，慢慢補上全台適合散步的地點。",
+      "從蓮池潭、西子灣、駁二等熱門景點開始，慢慢補上適合散步的地點。",
     icon: "🌿",
     bgColor: "#E8F4FA",
     href: "/kaohsiung",

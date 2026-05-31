@@ -4,7 +4,7 @@ import PingtungRouteMapPageTemplate from "@/components/PingtungRouteMapPageTempl
 import { SpotCards } from "./SpotCards";
 
 export const metadata: Metadata = {
-  title: "墾丁鵝鑾鼻海岸公園路線 | Bloom Walk Taiwan",
+  title: "墾丁鵝鑾鼻海岸公園路線 | Bloom Walk",
   description:
     "鵝鑾鼻海岸公園散步路線，適合皮克敏玩家收集屏東景點明信片、散步種花。",
 };

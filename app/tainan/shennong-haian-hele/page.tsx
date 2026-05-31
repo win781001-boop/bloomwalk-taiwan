@@ -4,7 +4,7 @@ import TainanRouteMapPageTemplate from "@/components/TainanRouteMapPageTemplate"
 import { SpotCards } from "./SpotCards";
 
 export const metadata: Metadata = {
-  title: "神農街 | Bloom Walk Taiwan",
+  title: "神農街 | Bloom Walk",
   description:
     "神農街散步路線，適合皮克敏玩家收集臺南景點明信片、散步種花。",
 };

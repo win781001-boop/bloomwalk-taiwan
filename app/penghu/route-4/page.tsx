@@ -4,7 +4,7 @@ import GenericRouteMapPageTemplate from "@/components/GenericRouteMapPageTemplat
 import 澎湖縣RouteDetailPage from "../RouteDetailPage";
 import { SpotCards } from "./SpotCards";
 
-export const metadata: Metadata = { title: "待命名路線四 | Bloom Walk Taiwan", description: "待補充", robots: { index: false } };
+export const metadata: Metadata = { title: "待命名路線四 | Bloom Walk", description: "待補充", robots: { index: false } };
 
 export default function Page() {
   const route = getPenghuRouteBySlug("route-4");

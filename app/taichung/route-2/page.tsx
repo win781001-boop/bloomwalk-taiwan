@@ -4,7 +4,7 @@ import GenericRouteMapPageTemplate from "@/components/GenericRouteMapPageTemplat
 import 臺中市RouteDetailPage from "../RouteDetailPage";
 import { SpotCards } from "./SpotCards";
 
-export const metadata: Metadata = { title: "待命名路線二 | Bloom Walk Taiwan", description: "待補充", robots: { index: false } };
+export const metadata: Metadata = { title: "待命名路線二 | Bloom Walk", description: "待補充", robots: { index: false } };
 
 export default function Page() {
   const route = getTaichungRouteBySlug("route-2");

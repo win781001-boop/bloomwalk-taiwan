@@ -4,7 +4,7 @@ import GenericRouteMapPageTemplate from "@/components/GenericRouteMapPageTemplat
 import 臺北市RouteDetailPage from "../RouteDetailPage";
 import { SpotCards } from "./SpotCards";
 
-export const metadata: Metadata = { title: "待命名路線一 | Bloom Walk Taiwan", description: "待補充", robots: { index: false } };
+export const metadata: Metadata = { title: "待命名路線一 | Bloom Walk", description: "待補充", robots: { index: false } };
 
 export default function Page() {
   const route = getTaipeiRouteBySlug("route-1");

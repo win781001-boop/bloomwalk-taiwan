@@ -10,7 +10,7 @@
             🌼
           </span>
           <span className="text-lg font-bold tracking-tight">
-            Bloom Walk Taiwan
+            Bloom Walk
           </span>
         </a>
         <nav className="hidden gap-6 text-sm font-medium text-bloom-text-light sm:flex">

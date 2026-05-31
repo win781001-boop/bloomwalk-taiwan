@@ -5,7 +5,7 @@ import 彰化縣RouteDetailPage from "../RouteDetailPage";
 import { SpotCards } from "./SpotCards";
 
 export const metadata: Metadata = {
-  title: "待命名路線一 | Bloom Walk Taiwan",
+  title: "待命名路線一 | Bloom Walk",
   description: "待補充",
   robots: { index: false },
 };

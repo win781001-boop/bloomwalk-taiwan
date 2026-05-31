@@ -4,7 +4,7 @@ import PingtungRouteMapPageTemplate from "@/components/PingtungRouteMapPageTempl
 import { SpotCards } from "./SpotCards";
 
 export const metadata: Metadata = {
-  title: "勝利星村眷村文化路線 | Bloom Walk Taiwan",
+  title: "勝利星村眷村文化路線 | Bloom Walk",
   description:
     "勝利星村散步路線，適合皮克敏玩家收集屏東景點明信片、散步種花。",
 };

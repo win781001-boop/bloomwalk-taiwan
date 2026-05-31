@@ -11,7 +11,7 @@ export default function KaohsiungCommunityDayPage() {
             <span className="text-2xl" role="img" aria-hidden="true">
               🌼
             </span>
-            <span className="text-lg font-bold tracking-tight">Bloom Walk Taiwan</span>
+            <span className="text-lg font-bold tracking-tight">Bloom Walk</span>
           </a>
 
           {/* Nav links */}
@@ -55,7 +55,7 @@ export default function KaohsiungCommunityDayPage() {
             <span role="img" aria-hidden="true">
               🌼
             </span>
-            <span>Bloom Walk Taiwan</span>
+            <span>Bloom Walk</span>
           </div>
 
           {/* Disclaimer */}
@@ -66,7 +66,7 @@ export default function KaohsiungCommunityDayPage() {
           </p>
 
           <p className="text-xs text-bloom-text-light/50">
-            © {new Date().getFullYear()} Bloom Walk Taiwan.
+            © {new Date().getFullYear()} Bloom Walk.
           </p>
         </div>
       </footer>

@@ -44,9 +44,9 @@ export default function Page() {
       </main>
       <footer className="border-t border-bloom-green-light/40 bg-bloom-cream px-4 py-10 sm:px-6">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 text-center">
-          <div className="flex items-center gap-2 text-sm text-bloom-text-light"><span role="img" aria-hidden="true">🌼</span><span>Bloom Walk Taiwan</span></div>
+          <div className="flex items-center gap-2 text-sm text-bloom-text-light"><span role="img" aria-hidden="true">🌼</span><span>Bloom Walk</span></div>
           <p className="max-w-lg text-xs leading-relaxed text-bloom-text-light/60">BloomWalk 是玩家自製的散步路線整理網站，非官方網站，與 Nintendo、Niantic 或 Pikmin Bloom 官方無關。路線內容僅供參考，實際交通、開放時間與場地狀況請以官方公告及現場資訊為準。</p>
-          <p className="text-xs text-bloom-text-light/50">&copy; {new Date().getFullYear()} Bloom Walk Taiwan.</p>
+          <p className="text-xs text-bloom-text-light/50">&copy; {new Date().getFullYear()} Bloom Walk.</p>
         </div>
       </footer>
     </div>

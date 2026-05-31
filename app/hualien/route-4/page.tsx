@@ -5,7 +5,7 @@ import HualienRouteDetailPage from "../RouteDetailPage";
 import { SpotCards } from "./SpotCards";
 
 export const metadata: Metadata = {
-  title: "待命名路線四 | Bloom Walk Taiwan",
+  title: "待命名路線四 | Bloom Walk",
   description: "待補充",
   robots: { index: false },
 };
