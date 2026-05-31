@@ -3,18 +3,6 @@
 export default function HomeHeroSection() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-bloom-sky-light via-bloom-cream to-bloom-green-light/40 px-4 pb-12 pt-12 sm:px-6 sm:pb-14 sm:pt-14 lg:pb-16 lg:pt-20">
-      {/* Full-section background image */}
-      <img
-        src="/home/hero-park-dog.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-30 sm:opacity-45"
-      />
-      {/* Light overlay to ensure text/card readability */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-bloom-sky-light/70 via-bloom-cream/60 to-bloom-green-light/40"
-      />
       {/* Decorative blobs */}
       <div
         aria-hidden="true"
@@ -45,26 +33,34 @@ export default function HomeHeroSection() {
         style={{ animationDelay: "2.5s" }}
       />
 
-      <div className="relative mx-auto max-w-6xl lg:grid lg:grid-cols-2 lg:items-start lg:gap-10">
-        {/* ── Left: Hero text ─────────────────── */}
-        <div className="text-center lg:text-left">
+      <div className="relative z-10 mx-auto max-w-6xl lg:grid lg:grid-cols-2 lg:items-stretch lg:gap-10">
+        {/* ── Left: Hero text module ────────────── */}
+        <div className="relative overflow-hidden rounded-2xl text-center lg:text-left h-full px-4 pt-6 pb-6 sm:px-6 sm:pt-8 sm:pb-8">
+          {/* Background image — covers entire left module */}
+          <img
+            src="/home/hero-park-dog.png"
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover object-bottom opacity-65 sm:opacity-75"
+          />
+          {/* Top-to-bottom gradient overlay: fades upper portion so text is readable */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/80 via-white/50 to-white/20"
+          />
+
           {/* Tagline */}
-          <p className="animate-fade-in-up text-sm font-semibold uppercase tracking-[0.25em] text-bloom-green">
+          <p className="animate-fade-in-up relative z-10 text-sm font-semibold uppercase tracking-[0.25em] text-bloom-green">
             WEEKEND BLOOM MAP
           </p>
 
           {/* Main heading */}
-          <h1 className="animate-fade-in-up-delay-1 mt-3 text-3xl font-extrabold leading-tight tracking-tight text-bloom-text sm:text-4xl sm:leading-tight lg:text-5xl lg:leading-tight">
+          <h1 className="animate-fade-in-up-delay-1 relative z-10 mt-3 text-3xl font-extrabold leading-tight tracking-tight text-bloom-text sm:text-4xl sm:leading-tight lg:text-4xl lg:leading-tight">
             假日放電、散步、種花的
             <br />
             <span className="text-bloom-green">旅遊</span>地圖
           </h1>
 
-          {/* Sub heading */}
-          <p className="animate-fade-in-up-delay-2 mx-auto mt-3 max-w-xl text-base leading-relaxed text-bloom-text-light lg:mx-0">
-            整理適合假日出門、輕鬆散步、順路種花與補給的景區路線，
-            從城市、公園、港邊與老街開始，慢慢補齊更多地點。
-          </p>
         </div>
 
         {/* ── Right: Entry cards 2×2 ─────────── */}
