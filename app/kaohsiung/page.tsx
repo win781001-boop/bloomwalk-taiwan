@@ -1,7 +1,5 @@
 ﻿import { kaohsiungRoutes } from "@/lib/kaohsiung-routes";
-import type { KaohsiungRoute } from "@/lib/kaohsiung-routes";
 
-import { categoryIconMap, categoryNames } from "@/lib/category-icons";
 import {
   kaohsiungLotusPondSpots,
   kaohsiungPier2Spots,
@@ -11,27 +9,26 @@ import {
   kaohsiungQiaotouSugarRefinerySpots,
 } from "@/lib/kaohsiung-spots";
 import type { Spot } from "@/lib/spot-types";
-/* ── 评分条 ──────────────────────────────── */
+import { RouteCard } from "@/components/RouteCard";
 
-function RatingBar({
-  value,
-  max = 5,
-  color = "bg-bloom-gold",
-}: {
-  value: number;
-  max?: number;
-  color?: string;
-}) {
-  return (
-    <div className="flex gap-1" aria-label={`${value}/${max}`}>
-      {Array.from({ length: max }, (_, i) => (
-        <div
-          key={i}
-          className={`h-1.5 w-5 rounded-full ${i < value ? color : "bg-bloom-green-light/50"}`}
-        />
-      ))}
-    </div>
-  );
+/* ── 路线背景图辅助 ────────────────────────── */
+
+const kaohsiungSpotsById = new Map<string, Spot>();
+[
+  ...kaohsiungLotusPondSpots,
+  ...kaohsiungPier2Spots,
+  ...kaohsiungQijinSpots,
+  ...kaohsiungChengcingLakeSpots,
+  ...kaohsiungSizihwanSpots,
+  ...kaohsiungQiaotouSugarRefinerySpots,
+].forEach((s) => kaohsiungSpotsById.set(s.id, s));
+
+function getRouteBgImage(route: { slug: string; spotIds?: string[] }): string | null {
+  if (!route.spotIds || route.spotIds.length === 0) return null;
+  const idx = route.slug.length % route.spotIds.length;
+  const id = route.spotIds[idx];
+  const spot = kaohsiungSpotsById.get(id);
+  return spot?.imagePlaceholder ?? null;
 }
 
 function appealLabel(score: number) {
@@ -39,8 +36,6 @@ function appealLabel(score: number) {
   if (score === 4) return "有特色，適合順路安排";
   return "實用散步點，明信片吸引力普通";
 }
-
-/* ── 页面 ──────────────────────────────────── */
 
 export default function KaohsiungPage() {
   return (
@@ -77,7 +72,6 @@ export default function KaohsiungPage() {
       </header>
 
       <main className="flex-1">
-        {/* Page header */}
         <section className="bg-gradient-to-b from-bloom-sky-light via-bloom-cream to-bloom-cream px-4 pb-16 pt-20 sm:px-6 sm:pb-20 sm:pt-28">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-bloom-green">
@@ -100,23 +94,25 @@ export default function KaohsiungPage() {
           </div>
         </section>
 
-        {/* Route cards */}
         <section className="bg-bloom-cream px-4 pb-24 sm:px-6 sm:pb-32">
           <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-6">
             {kaohsiungRoutes.filter(r => r.status !== "draft").map((route) => (
-              <Card key={route.slug} route={route} />
+              <RouteCard
+                key={route.slug}
+                route={route}
+                backgroundImage={getRouteBgImage(route)}
+                baseHref="/kaohsiung"
+                appealLabel={appealLabel}
+              />
             ))}
           </div>
         </section>
       </main>
 
-      {/* Footer */}
       <footer className="border-t border-bloom-green-light/40 bg-bloom-cream px-4 py-10 sm:px-6">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 text-center">
           <div className="flex items-center gap-2 text-sm text-bloom-text-light">
-            <span role="img" aria-hidden="true">
-              🌼
-            </span>
+            <span role="img" aria-hidden="true">🌼</span>
             <span>Bloom Walk Taiwan</span>
           </div>
           <p className="max-w-lg text-xs leading-relaxed text-bloom-text-light/60">
@@ -125,137 +121,10 @@ export default function KaohsiungPage() {
             與現場狀況請以官方公告及現場資訊為準。
           </p>
           <p className="text-xs text-bloom-text-light/50">
-            © {new Date().getFullYear()} Bloom Walk Taiwan.
+            &copy; {new Date().getFullYear()} Bloom Walk Taiwan.
           </p>
         </div>
       </footer>
-    </div>
-  );
-}
-
-/* ── 路线背景图辅助 ────────────────────────── */
-
-/** 所有高雄景点的 id → Spot 查詢表 */
-const kaohsiungSpotsById = new Map<string, Spot>();
-[
-  ...kaohsiungLotusPondSpots,
-  ...kaohsiungPier2Spots,
-  ...kaohsiungQijinSpots,
-  ...kaohsiungChengcingLakeSpots,
-  ...kaohsiungSizihwanSpots,
-  ...kaohsiungQiaotouSugarRefinerySpots,
-].forEach((s) => kaohsiungSpotsById.set(s.id, s));
-
-/** 根據 route slug 穩定選取一張景點背景圖 */
-function getRouteBgImage(route: KaohsiungRoute): string | null {
-  if (!route.spotIds || route.spotIds.length === 0) return null;
-  const idx = route.slug.length % route.spotIds.length;
-  const id = route.spotIds[idx];
-  const spot = kaohsiungSpotsById.get(id);
-  return spot?.imagePlaceholder ?? null;
-}
-
-/* ── 单张路线卡片 ──────────────────────────── */
-
-function Card({ route }: { route: KaohsiungRoute }) {
-  const bgImage = getRouteBgImage(route);
-  return (
-    <div className="relative overflow-hidden rounded-2xl border border-bloom-green-light/50 p-5 shadow-sm transition-all duration-300 hover:shadow-md sm:p-7" style={{ backgroundColor: "#FEFCF5" }}>
-      {bgImage != null && (
-        <>
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              backgroundImage: `url(${bgImage})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              opacity: 0.50,
-              filter: "brightness(1.05) saturate(0.9) contrast(0.95) blur(1px)",
-            }}
-          />
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                "radial-gradient(farthest-corner at 100% 100%, rgba(255,250,240,0.15) 0%, rgba(255,250,240,0.40) 35%, rgba(255,250,240,0.72) 65%, rgba(255,250,240,0.88) 100%)",
-            }}
-          />
-        </>
-      )}
-      <div className="relative z-10">
-        <div className="flex items-start gap-4">
-        <div
-          className="flex h-[84px] w-[84px] shrink-0 items-center justify-center rounded-2xl border border-amber-100/60"
-          style={{ backgroundColor: "#fff7e8" }}
-        >
-          <img
-            src={categoryIconMap[route.primaryCategory]}
-            alt={categoryNames[route.primaryCategory]}
-            className="h-[60px] w-[60px] object-contain"
-          />
-        </div>
-        <div className="min-w-0 flex-1">
-          <a
-            href={`/kaohsiung/${route.slug}`}
-            className="text-lg font-bold tracking-tight text-bloom-text sm:text-xl hover:underline hover:opacity-70 transition-all"
-          >
-            {route.name}
-          </a>
-          <p className="mt-0.5 text-xs font-medium text-bloom-green">
-            {route.area}
-          </p>
-          <p className="mt-2 text-sm leading-relaxed text-bloom-text-light sm:text-base">
-            {route.summary}
-          </p>
-        </div>
-      </div>
-
-      <hr className="my-5 border-bloom-green-light/30" />
-
-      <div className="space-y-3">
-        <div>
-          <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-bloom-text-light">
-            ⭐ 明信片吸引力
-          </p>
-          <RatingBar value={route.postcardAppeal} />
-          <p className="mt-1 text-xs font-medium text-bloom-gold">
-            {route.postcardAppeal}/5 — {appealLabel(route.postcardAppeal)}
-          </p>
-        </div>
-
-        <div>
-          <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-bloom-text-light">
-            🚶 散步舒適度
-          </p>
-          <RatingBar value={route.walkingComfort} color="bg-bloom-green" />
-          <p className="mt-1 text-xs text-bloom-text-light/70">
-            {route.walkingComfort}/5
-          </p>
-        </div>
-
-        <div>
-          <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-bloom-text-light">
-            🚇 交通便利度
-          </p>
-          <RatingBar
-            value={route.transportConvenience}
-            color="bg-bloom-sky"
-          />
-          <p className="mt-1 text-xs text-bloom-text-light/70">
-            {route.transportConvenience}/5
-          </p>
-        </div>
-      </div>
-      <div className="mt-3 flex flex-wrap gap-2">
-        {route.tags.map((tag) => (
-          <span
-            key={tag}
-            className="inline-block rounded-full border border-bloom-green-light/40 bg-bloom-green-light/30 px-3 py-0.5 text-xs text-bloom-green-dark"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>      </div>
     </div>
   );
 }
