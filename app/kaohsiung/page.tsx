@@ -1,7 +1,16 @@
-import { kaohsiungRoutes } from "@/lib/kaohsiung-routes";
+﻿import { kaohsiungRoutes } from "@/lib/kaohsiung-routes";
 import type { KaohsiungRoute } from "@/lib/kaohsiung-routes";
 
 import { categoryIconMap, categoryNames } from "@/lib/category-icons";
+import {
+  kaohsiungLotusPondSpots,
+  kaohsiungPier2Spots,
+  kaohsiungQijinSpots,
+  kaohsiungChengcingLakeSpots,
+  kaohsiungSizihwanSpots,
+  kaohsiungQiaotouSugarRefinerySpots,
+} from "@/lib/kaohsiung-spots";
+import type { Spot } from "@/lib/spot-types";
 /* ── 评分条 ──────────────────────────────── */
 
 function RatingBar({
@@ -124,15 +133,60 @@ export default function KaohsiungPage() {
   );
 }
 
+/* ── 路线背景图辅助 ────────────────────────── */
+
+/** 所有高雄景点的 id → Spot 查詢表 */
+const kaohsiungSpotsById = new Map<string, Spot>();
+[
+  ...kaohsiungLotusPondSpots,
+  ...kaohsiungPier2Spots,
+  ...kaohsiungQijinSpots,
+  ...kaohsiungChengcingLakeSpots,
+  ...kaohsiungSizihwanSpots,
+  ...kaohsiungQiaotouSugarRefinerySpots,
+].forEach((s) => kaohsiungSpotsById.set(s.id, s));
+
+/** 根據 route slug 穩定選取一張景點背景圖 */
+function getRouteBgImage(route: KaohsiungRoute): string | null {
+  if (!route.spotIds || route.spotIds.length === 0) return null;
+  const idx = route.slug.length % route.spotIds.length;
+  const id = route.spotIds[idx];
+  const spot = kaohsiungSpotsById.get(id);
+  return spot?.imagePlaceholder ?? null;
+}
+
 /* ── 单张路线卡片 ──────────────────────────── */
 
 function Card({ route }: { route: KaohsiungRoute }) {
+  const bgImage = getRouteBgImage(route);
   return (
-    <div className="rounded-2xl border border-bloom-green-light/50 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md sm:p-7">
-      <div className="flex items-start gap-4">
+    <div className="relative overflow-hidden rounded-2xl border border-bloom-green-light/50 p-5 shadow-sm transition-all duration-300 hover:shadow-md sm:p-7" style={{ backgroundColor: "#FEFCF5" }}>
+      {bgImage != null && (
+        <>
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              backgroundImage: `url(${bgImage})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              opacity: 0.50,
+              filter: "brightness(1.05) saturate(0.9) contrast(0.95) blur(1px)",
+            }}
+          />
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(farthest-corner at 100% 100%, rgba(255,250,240,0.15) 0%, rgba(255,250,240,0.40) 35%, rgba(255,250,240,0.72) 65%, rgba(255,250,240,0.88) 100%)",
+            }}
+          />
+        </>
+      )}
+      <div className="relative z-10">
+        <div className="flex items-start gap-4">
         <div
-          className="flex h-[84px] w-[84px] shrink-0 items-center justify-center rounded-2xl"
-          style={{ backgroundColor: "#E8F0DE" }}
+          className="flex h-[84px] w-[84px] shrink-0 items-center justify-center rounded-2xl border border-amber-100/60"
+          style={{ backgroundColor: "#fff7e8" }}
         >
           <img
             src={categoryIconMap[route.primaryCategory]}
@@ -158,7 +212,7 @@ function Card({ route }: { route: KaohsiungRoute }) {
 
       <hr className="my-5 border-bloom-green-light/30" />
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="space-y-3">
         <div>
           <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-bloom-text-light">
             ⭐ 明信片吸引力
@@ -167,42 +221,32 @@ function Card({ route }: { route: KaohsiungRoute }) {
           <p className="mt-1 text-xs font-medium text-bloom-gold">
             {route.postcardAppeal}/5 — {appealLabel(route.postcardAppeal)}
           </p>
-          <p className="mt-1 text-xs leading-relaxed text-bloom-text-light/70">
-            {route.postcardReason}
+        </div>
+
+        <div>
+          <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-bloom-text-light">
+            🚶 散步舒適度
+          </p>
+          <RatingBar value={route.walkingComfort} color="bg-bloom-green" />
+          <p className="mt-1 text-xs text-bloom-text-light/70">
+            {route.walkingComfort}/5
           </p>
         </div>
 
-        <div className="space-y-3">
-          <div>
-            <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-bloom-text-light">
-              🚶 散步舒適度
-            </p>
-            <RatingBar value={route.walkingComfort} color="bg-bloom-green" />
-            <p className="mt-0.5 text-xs text-bloom-text-light/70">
-              {route.walkingComfort}/5
-            </p>
-          </div>
-          <div>
-            <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-bloom-text-light">
-              🚇 交通便利度
-            </p>
-            <RatingBar
-              value={route.transportConvenience}
-              color="bg-bloom-sky"
-            />
-            <p className="mt-0.5 text-xs text-bloom-text-light/70">
-              {route.transportConvenience}/5
-            </p>
-          </div>
+        <div>
+          <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-bloom-text-light">
+            🚇 交通便利度
+          </p>
+          <RatingBar
+            value={route.transportConvenience}
+            color="bg-bloom-sky"
+          />
+          <p className="mt-1 text-xs text-bloom-text-light/70">
+            {route.transportConvenience}/5
+          </p>
         </div>
       </div>
-
-      <div className="mt-5 flex flex-wrap gap-x-6 gap-y-1 text-xs text-bloom-text-light">
-        <span>⏱ 建議時間：{route.duration}</span>
-        <span>🕐 適合時段：{route.bestTime}</span>
-      </div>
-
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="mt-3 flex flex-wrap gap-2">
         {route.tags.map((tag) => (
           <span
             key={tag}
@@ -211,9 +255,7 @@ function Card({ route }: { route: KaohsiungRoute }) {
             {tag}
           </span>
         ))}
-      </div>
-
+      </div>      </div>
     </div>
   );
 }
-
