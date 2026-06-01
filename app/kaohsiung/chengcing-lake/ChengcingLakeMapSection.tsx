@@ -59,7 +59,7 @@ export function ChengcingLakeMapSection({
         }}
       >
         <img
-          src="/maps/chengcing-lake/map.png"
+          src="/maps/chengcing-lake/map.webp"
           alt="澄清湖手繪地圖"
           className="h-full w-full object-contain"
         />
@@ -142,3 +142,4 @@ export function ChengcingLakeMapSection({
     </div>
   );
 }
+

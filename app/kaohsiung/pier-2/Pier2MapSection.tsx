@@ -62,7 +62,7 @@ export function Pier2MapSection({
         }}
       >
         <img
-          src="/maps/pier-2/map.png"
+          src="/maps/pier-2/map.webp"
           alt="駁二藝術特區手繪地圖"
           className="h-full w-full object-contain"
         />
@@ -147,3 +147,4 @@ export function Pier2MapSection({
     </div>
   );
 }
+

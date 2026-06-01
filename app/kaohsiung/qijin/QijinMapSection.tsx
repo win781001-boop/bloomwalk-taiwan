@@ -60,7 +60,7 @@ export function QijinMapSection({
         }}
       >
         <img
-          src="/maps/qijin/map.png"
+          src="/maps/qijin/map.webp"
           alt="旗津手繪地圖"
           className="h-full w-full object-contain"
         />
@@ -143,3 +143,4 @@ export function QijinMapSection({
     </div>
   );
 }
+

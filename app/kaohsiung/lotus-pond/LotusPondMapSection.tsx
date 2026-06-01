@@ -59,7 +59,7 @@ export function LotusPondMapSection({
         }}
       >
         <img
-          src="/maps/lianchihtan.png"
+          src="/maps/lianchihtan.webp"
           alt="蓮池潭手繪地圖"
           className="h-full w-full object-contain"
         />
@@ -142,3 +142,4 @@ export function LotusPondMapSection({
     </div>
   );
 }
+

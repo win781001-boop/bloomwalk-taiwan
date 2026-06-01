@@ -59,7 +59,7 @@ export function QiaotouMapSection({
         }}
       >
         <img
-          src="/maps/qiaotou-sugar-refinery/map.png"
+          src="/maps/qiaotou-sugar-refinery/map.webp"
           alt="橋頭糖廠手繪地圖"
           className="h-full w-full object-contain"
         />
@@ -142,3 +142,4 @@ export function QiaotouMapSection({
     </div>
   );
 }
+

@@ -59,7 +59,7 @@ export function SizihwanMapSection({
         }}
       >
         <img
-          src="/maps/sizihwan/map.png"
+          src="/maps/sizihwan/map.webp"
           alt="西子灣手繪地圖"
           className="h-full w-full object-contain"
         />
@@ -142,3 +142,4 @@ export function SizihwanMapSection({
     </div>
   );
 }
+

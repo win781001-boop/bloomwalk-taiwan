@@ -18,7 +18,7 @@ export const kaohsiungLotusPondSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/龍虎塔+蓮池潭+高雄",
     suggestedStayMinutes: 20,
     notes: "蓮池潭代表地標，適合拍照與明信片收集。",
-    imagePlaceholder: "/maps/lotus-pond/longhu-tower.jpg",
+    imagePlaceholder: "/maps/lotus-pond/longhu-tower.webp",
   },
   {
     id: "lotus-chunqiu-pavilion",
@@ -31,7 +31,7 @@ export const kaohsiungLotusPondSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/春秋閣+蓮池潭+高雄",
     suggestedStayMinutes: 15,
     notes: "靠近湖岸步道，可接續龍虎塔安排散步。",
-    imagePlaceholder: "/maps/lotus-pond/chunqiu-pavilion.jpg",
+    imagePlaceholder: "/maps/lotus-pond/chunqiu-pavilion.webp",
   },
   {
     id: "lotus-beiji-pavilion",
@@ -44,7 +44,7 @@ export const kaohsiungLotusPondSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/元帝廟北極亭+蓮池潭+高雄",
     suggestedStayMinutes: 10,
     notes: "湖面視角焦點，可作為路線中段停留點。",
-    imagePlaceholder: "/maps/lotus-pond/yuandi-temple.jpg",
+    imagePlaceholder: "/maps/lotus-pond/yuandi-temple.webp",
   },
   {
     id: "lotus-lakeside-trail",
@@ -57,7 +57,7 @@ export const kaohsiungLotusPondSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/蓮池潭環潭步道+高雄",
     suggestedStayMinutes: 30,
     notes: "適合 Pikmin Bloom 玩家任務種花與散步。",
-    imagePlaceholder: "/maps/lotus-pond/lakeside-trail.jpg",
+    imagePlaceholder: "/maps/lotus-pond/lakeside-trail.webp",
   },
   {
     id: "lotus-zuoying-temple",
@@ -70,7 +70,7 @@ export const kaohsiungLotusPondSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/左營孔廟+蓮池潭+高雄",
     suggestedStayMinutes: 30,
     notes: "蓮池潭北側文化景點，適合半日遊延伸。",
-    imagePlaceholder: "/maps/lotus-pond/zuoying-temple.jpg",
+    imagePlaceholder: "/maps/lotus-pond/zuoying-temple.webp",
   },
   {
     id: "lotus-lotus-pond",
@@ -83,7 +83,7 @@ export const kaohsiungLotusPondSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/蓮池潭+高雄",
     suggestedStayMinutes: 20,
     notes: "湖區自然景觀，適合散步與親子路線。",
-    imagePlaceholder: "/maps/lotus-pond/lotus-pond.jpg",
+    imagePlaceholder: "/maps/lotus-pond/lotus-pond.webp",
   },
   {
     id: "lotus-children-park",
@@ -96,7 +96,7 @@ export const kaohsiungLotusPondSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/蓮池潭兒童公園+高雄",
     suggestedStayMinutes: 20,
     notes: "兒童遊戲場所，適合放風。",
-    imagePlaceholder: "/maps/lotus-pond/children-park.jpg",
+    imagePlaceholder: "/maps/lotus-pond/children-park.webp",
   },
   {
     id: "lotus-zhouzai-wetland",
@@ -109,7 +109,7 @@ export const kaohsiungLotusPondSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/洲仔濕地+蓮池潭+高雄",
     suggestedStayMinutes: 25,
     notes: "自然景觀，適合生態教育。",
-    imagePlaceholder: "/maps/lotus-pond/zhouzai-wetland.jpg",
+    imagePlaceholder: "/maps/lotus-pond/zhouzai-wetland.webp",
   },
 ];
 
@@ -126,7 +126,7 @@ export const kaohsiungPier2Spots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/高雄流行音樂中心+駁二",
     suggestedStayMinutes: 30,
     notes: "高雄港邊地標建築，鯨魚造型展演空間，日夜景各有風情。",
-    imagePlaceholder: "/maps/pier-2/a.png",
+    imagePlaceholder: "/maps/pier-2/a.webp",
   },
   {
     id: "pier2-B",
@@ -139,7 +139,7 @@ export const kaohsiungPier2Spots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/駁二大勇區",
     suggestedStayMinutes: 40,
     notes: "駁二主展區，倉庫改建為藝廊、商店與餐廳，假日市集熱鬧。",
-    imagePlaceholder: "/maps/pier-2/b.png",
+    imagePlaceholder: "/maps/pier-2/b.webp",
   },
   {
     id: "pier2-C",
@@ -152,7 +152,7 @@ export const kaohsiungPier2Spots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/大港橋+高雄",
     suggestedStayMinutes: 15,
     notes: "可旋轉開啟的景觀橋，連結駁二與棧貳庫，日落時分景色絕佳。",
-    imagePlaceholder: "/maps/pier-2/c.png",
+    imagePlaceholder: "/maps/pier-2/c.webp",
   },
   {
     id: "pier2-D",
@@ -165,7 +165,7 @@ export const kaohsiungPier2Spots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/駁二大義區",
     suggestedStayMinutes: 30,
     notes: "輕軌大義站旁，倉庫群內有誠品書店、展演空間與特色餐廳。",
-    imagePlaceholder: "/maps/pier-2/d.png",
+    imagePlaceholder: "/maps/pier-2/d.webp",
   },
   {
     id: "pier2-E",
@@ -178,7 +178,7 @@ export const kaohsiungPier2Spots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/駁二蓬萊倉庫群",
     suggestedStayMinutes: 25,
     notes: "歷史倉庫群改建的文創聚落，鄰近哈瑪星與輕軌蓬萊站。",
-    imagePlaceholder: "/maps/pier-2/e.png",
+    imagePlaceholder: "/maps/pier-2/e.webp",
   },
   {
     id: "pier2-F",
@@ -191,7 +191,7 @@ export const kaohsiungPier2Spots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/哈瑪星鐵道文化園區",
     suggestedStayMinutes: 30,
     notes: "舊鐵道與草地廣場，適合散步、野餐與鐵道攝影，駁二路線終點延伸。",
-    imagePlaceholder: "/maps/pier-2/f.png",
+    imagePlaceholder: "/maps/pier-2/f.webp",
   },
   {
     id: "pier2-G",
@@ -204,7 +204,7 @@ export const kaohsiungPier2Spots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/舊打狗驛故事館",
     suggestedStayMinutes: 20,
     notes: "原高雄港站改建的鐵道博物館，展示老火車與港站歷史。",
-    imagePlaceholder: "/maps/pier-2/g.png",
+    imagePlaceholder: "/maps/pier-2/g.webp",
   },
   {
     id: "pier2-H",
@@ -217,7 +217,7 @@ export const kaohsiungPier2Spots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/棧貳庫+高雄",
     suggestedStayMinutes: 40,
     notes: "港邊百年倉庫改建的美食文創商場，可搭旋轉景觀橋往返駁二。",
-    imagePlaceholder: "/maps/pier-2/h.png",
+    imagePlaceholder: "/maps/pier-2/h.webp",
   },
 ];
 
@@ -235,7 +235,7 @@ export const kaohsiungQijinSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/旗津渡輪站+高雄",
     suggestedStayMinutes: 15,
     notes: "往返旗津與鼓山的交通樞紐，出站即是旗津老街入口，海風與渡輪景色相伴。",
-    imagePlaceholder: "/maps/qijin/a.png",
+    imagePlaceholder: "/maps/qijin/a.webp",
   },
   {
     id: "qijin-B",
@@ -248,7 +248,7 @@ export const kaohsiungQijinSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/旗津天后宮+高雄",
     suggestedStayMinutes: 20,
     notes: "旗津信仰中心，三百餘年歷史的媽祖廟，廟宇裝飾精緻，香火鼎盛。",
-    imagePlaceholder: "/maps/qijin/b.png",
+    imagePlaceholder: "/maps/qijin/b.webp",
   },
   {
     id: "qijin-C",
@@ -261,7 +261,7 @@ export const kaohsiungQijinSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/旗津老街+高雄",
     suggestedStayMinutes: 30,
     notes: "旗津最熱鬧的市街，烤小卷、海產與在地小吃集中地，假日人潮絡繹不絕。",
-    imagePlaceholder: "/maps/qijin/c.png",
+    imagePlaceholder: "/maps/qijin/c.webp",
   },
   {
     id: "qijin-D",
@@ -274,7 +274,7 @@ export const kaohsiungQijinSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/旗津燈塔+高雄",
     suggestedStayMinutes: 25,
     notes: "白色八角形燈塔，建於清末，俯瞰高雄港入口，是旗津經典地標與明信片焦點。",
-    imagePlaceholder: "/maps/qijin/d.png",
+    imagePlaceholder: "/maps/qijin/d.webp",
   },
   {
     id: "qijin-E",
@@ -287,7 +287,7 @@ export const kaohsiungQijinSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/旗津星空隧道+高雄",
     suggestedStayMinutes: 15,
     notes: "廢棄軍事隧道改建而成的星光步道，壁面彩繪螢光星空，白天與夜晚各有不同氛圍。",
-    imagePlaceholder: "/maps/qijin/e.png",
+    imagePlaceholder: "/maps/qijin/e.webp",
   },
   {
     id: "qijin-F",
@@ -300,7 +300,7 @@ export const kaohsiungQijinSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/旗後砲台+高雄",
     suggestedStayMinutes: 25,
     notes: "清末海防砲台遺址，城牆與砲座保存完整，居高臨下可眺望高雄港與台灣海峽。",
-    imagePlaceholder: "/maps/qijin/f.png",
+    imagePlaceholder: "/maps/qijin/f.webp",
   },
   {
     id: "qijin-G",
@@ -313,7 +313,7 @@ export const kaohsiungQijinSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/旗津海岸公園+高雄",
     suggestedStayMinutes: 25,
     notes: "旗津南側的長長沙灘與海岸步道，適合看海、散步、吹海風。",
-    imagePlaceholder: "/maps/qijin/g.png",
+    imagePlaceholder: "/maps/qijin/g.webp",
   },
   {
     id: "qijin-H",
@@ -326,7 +326,7 @@ export const kaohsiungQijinSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/旗津彩虹教堂+高雄",
     suggestedStayMinutes: 20,
     notes: "以彩虹色幾何拱門為造型的婚紗與打卡熱點，搭配海天一色背景，畫面感強烈。",
-    imagePlaceholder: "/maps/qijin/h.png",
+    imagePlaceholder: "/maps/qijin/h.webp",
   },
 ];
 /** ??????????? (A-H ??) */
@@ -344,7 +344,7 @@ export const kaohsiungChengcingLakeSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/海洋奇珍園+澄清湖+高雄",
     suggestedStayMinutes: 25,
     notes: "位於澄清湖園區內的展示館點位，可作為進入湖區散步路線的起點。是否入館參觀，建議依現場開放與售票資訊安排。",
-    imagePlaceholder: "/maps/chengcing-lake/a.png",
+    imagePlaceholder: "/maps/chengcing-lake/a.webp",
   },
   {
     id: "chengcing-B",
@@ -357,7 +357,7 @@ export const kaohsiungChengcingLakeSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/澄清湖九曲橋+高雄",
     suggestedStayMinutes: 20,
     notes: "澄清湖最具辨識度的湖上景觀之一，曲折橋身與水面相互映照，是這條路線重要的拍照停留點。",
-    imagePlaceholder: "/maps/chengcing-lake/b.png",
+    imagePlaceholder: "/maps/chengcing-lake/b.webp",
   },
   {
     id: "chengcing-C",
@@ -370,7 +370,7 @@ export const kaohsiungChengcingLakeSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/澄清湖泡茶區+高雄",
     suggestedStayMinutes: 20,
     notes: "園區中的休憩區域，適合在湖畔散步途中放慢速度、稍作停留，銜接後續亭台與湖景點位。",
-    imagePlaceholder: "/maps/chengcing-lake/c.png",
+    imagePlaceholder: "/maps/chengcing-lake/c.webp",
   },
   {
     id: "chengcing-D",
@@ -383,7 +383,7 @@ export const kaohsiungChengcingLakeSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/澄清湖雙蓮亭+高雄",
     suggestedStayMinutes: 15,
     notes: "靠近湖景與綠意的亭台點位，畫面安靜舒適，適合停下腳步欣賞周邊景色與拍照。",
-    imagePlaceholder: "/maps/chengcing-lake/d.png",
+    imagePlaceholder: "/maps/chengcing-lake/d.webp",
   },
   {
     id: "chengcing-E",
@@ -396,7 +396,7 @@ export const kaohsiungChengcingLakeSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/澄清湖富國島+高雄",
     suggestedStayMinutes: 20,
     notes: "澄清湖著名景觀點位之一，位於湖區散步動線之中，適合安排為路線中段的湖畔景色收集點。",
-    imagePlaceholder: "/maps/chengcing-lake/e.png",
+    imagePlaceholder: "/maps/chengcing-lake/e.webp",
   },
   {
     id: "chengcing-F",
@@ -409,7 +409,7 @@ export const kaohsiungChengcingLakeSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/澄清湖烤肉區+高雄",
     suggestedStayMinutes: 15,
     notes: "園區內較具休憩氛圍的區域，假日可能較熱鬧。實際開放與使用狀態請依現場及官方公告為準。",
-    imagePlaceholder: "/maps/chengcing-lake/f.png",
+    imagePlaceholder: "/maps/chengcing-lake/f.webp",
   },
   {
     id: "chengcing-G",
@@ -422,7 +422,7 @@ export const kaohsiungChengcingLakeSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/澄清湖中興塔+高雄",
     suggestedStayMinutes: 25,
     notes: "澄清湖具代表性的塔景地標，可作為路線後段的重要目標點，為湖畔散步增加不同的景觀層次。",
-    imagePlaceholder: "/maps/chengcing-lake/g.png",
+    imagePlaceholder: "/maps/chengcing-lake/g.webp",
   },
   {
     id: "chengcing-H",
@@ -435,7 +435,7 @@ export const kaohsiungChengcingLakeSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/澄清湖三亭攬勝+高雄",
     suggestedStayMinutes: 20,
     notes: "適合作為路線收尾的景觀停留點，可在較開闊的視角下感受澄清湖的湖區氛圍與亭台景色。",
-    imagePlaceholder: "/maps/chengcing-lake/h.png",
+    imagePlaceholder: "/maps/chengcing-lake/h.webp",
   },
 ];
 /** 高雄西子灣路線景點資料 (A-H 點位) */
@@ -451,7 +451,7 @@ export const kaohsiungSizihwanSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/鼓山輪渡站+高雄",
     suggestedStayMinutes: 15,
     notes: "往返旗津與鼓山的交通樞紐，鼓山碼頭旁即可搭乘渡輪前往旗津，海風與渡輪景色相伴。",
-    imagePlaceholder: "/maps/sizihwan/a.png",
+    imagePlaceholder: "/maps/sizihwan/a.webp",
   },
   {
     id: "sizihwan-B",
@@ -464,7 +464,7 @@ export const kaohsiungSizihwanSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/一號船渠景觀橋+高雄",
     suggestedStayMinutes: 10,
     notes: "連結鼓山與哈瑪星的景觀橋樑，橋上視野開闊，可欣賞船渠與港邊風光。",
-    imagePlaceholder: "/maps/sizihwan/b.png",
+    imagePlaceholder: "/maps/sizihwan/b.webp",
   },
   {
     id: "sizihwan-C",
@@ -477,7 +477,7 @@ export const kaohsiungSizihwanSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/西子灣隧道+高雄",
     suggestedStayMinutes: 10,
     notes: "穿越柴山連接哈瑪星與西子灣的歷史隧道，洞內涼爽，兩側有懷舊燈光氛圍。",
-    imagePlaceholder: "/maps/sizihwan/c.png",
+    imagePlaceholder: "/maps/sizihwan/c.webp",
   },
   {
     id: "sizihwan-D",
@@ -490,7 +490,7 @@ export const kaohsiungSizihwanSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/哨船頭公園+高雄",
     suggestedStayMinutes: 15,
     notes: "西子灣周邊港邊小公園，適合散步途中短暫休息，欣賞港灣船隻往來。",
-    imagePlaceholder: "/maps/sizihwan/d.png",
+    imagePlaceholder: "/maps/sizihwan/d.webp",
   },
   {
     id: "sizihwan-E",
@@ -503,7 +503,7 @@ export const kaohsiungSizihwanSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/雄鎮北門+高雄",
     suggestedStayMinutes: 20,
     notes: "清代砲台城門遺址，位於西子灣北側制高點，城門與砲座保存完整，可眺望高雄港入口。",
-    imagePlaceholder: "/maps/sizihwan/e.png",
+    imagePlaceholder: "/maps/sizihwan/e.webp",
   },
   {
     id: "sizihwan-F",
@@ -516,7 +516,7 @@ export const kaohsiungSizihwanSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/西子灣觀景臺+高雄",
     suggestedStayMinutes: 25,
     notes: "西子灣制高點觀景平台，海景視野開闊，是欣賞夕陽與高雄港景色的經典位置，明信片吸引力極高。",
-    imagePlaceholder: "/maps/sizihwan/f.png",
+    imagePlaceholder: "/maps/sizihwan/f.webp",
   },
   {
     id: "sizihwan-G",
@@ -529,7 +529,7 @@ export const kaohsiungSizihwanSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/打狗英國領事館文化園區+高雄",
     suggestedStayMinutes: 30,
     notes: "英國舊領事館建築群，紅磚拱廊與西子灣海景相映，是高雄最具歷史感的文化景點之一。",
-    imagePlaceholder: "/maps/sizihwan/g.png",
+    imagePlaceholder: "/maps/sizihwan/g.webp",
   },
   {
     id: "sizihwan-H",
@@ -542,7 +542,7 @@ export const kaohsiungSizihwanSpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/國立中山大學+高雄",
     suggestedStayMinutes: 10,
     notes: "中山大學入口牌樓，倚靠柴山面向西子灣，校園建築與山海景觀交融。",
-    imagePlaceholder: "/maps/sizihwan/h.png",
+    imagePlaceholder: "/maps/sizihwan/h.webp",
   },
 ];
 /** 高雄橋頭糖廠路線景點資料 (A-H 點位) */
@@ -558,7 +558,7 @@ export const kaohsiungQiaotouSugarRefinerySpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/橋頭老街+高雄",
     suggestedStayMinutes: 25,
     notes: "橋頭最具特色的傳統老街，市場小吃與攤商雲集，充滿在地生活氣息。",
-    imagePlaceholder: "/maps/qiaotou-sugar-refinery/a.png",
+    imagePlaceholder: "/maps/qiaotou-sugar-refinery/a.webp",
   },
   {
     id: "qiaotou-B",
@@ -571,7 +571,7 @@ export const kaohsiungQiaotouSugarRefinerySpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/橋頭糖廠糖業博物館+高雄",
     suggestedStayMinutes: 30,
     notes: "原橋仔頭糖廠辦公廳舍改建的博物館，展示台灣糖業歷史與製糖過程，園區核心文化景點。",
-    imagePlaceholder: "/maps/qiaotou-sugar-refinery/b.png",
+    imagePlaceholder: "/maps/qiaotou-sugar-refinery/b.webp",
   },
   {
     id: "qiaotou-C",
@@ -584,7 +584,7 @@ export const kaohsiungQiaotouSugarRefinerySpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/與糖面室+橋頭糖廠",
     suggestedStayMinutes: 15,
     notes: "日式宿舍改建的創作空間，不定期舉辦展覽與工作坊，是園區內的藝文亮點。",
-    imagePlaceholder: "/maps/qiaotou-sugar-refinery/c.png",
+    imagePlaceholder: "/maps/qiaotou-sugar-refinery/c.webp",
   },
   {
     id: "qiaotou-D",
@@ -597,7 +597,7 @@ export const kaohsiungQiaotouSugarRefinerySpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/吉照故里茶道院+橋頭糖廠",
     suggestedStayMinutes: 25,
     notes: "日式木造宿舍改建的茶館空間，庭園與和風建築氛圍濃厚，適合散步途中稍作停留。",
-    imagePlaceholder: "/maps/qiaotou-sugar-refinery/d.png",
+    imagePlaceholder: "/maps/qiaotou-sugar-refinery/d.webp",
   },
   {
     id: "qiaotou-E",
@@ -610,7 +610,7 @@ export const kaohsiungQiaotouSugarRefinerySpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/台糖展售中心+橋頭糖廠",
     suggestedStayMinutes: 20,
     notes: "台糖產品展售空間，販售糖廠冰品與在地特產，適合散步途中補充體力。",
-    imagePlaceholder: "/maps/qiaotou-sugar-refinery/e.png",
+    imagePlaceholder: "/maps/qiaotou-sugar-refinery/e.webp",
   },
   {
     id: "qiaotou-F",
@@ -623,7 +623,7 @@ export const kaohsiungQiaotouSugarRefinerySpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/橋頭糖廠社宅事務所+高雄",
     suggestedStayMinutes: 15,
     notes: "原糖廠員工社宅事務所，日式木造建築保存良好，見證當年糖廠社區生活樣貌。",
-    imagePlaceholder: "/maps/qiaotou-sugar-refinery/f.png",
+    imagePlaceholder: "/maps/qiaotou-sugar-refinery/f.webp",
   },
   {
     id: "qiaotou-G",
@@ -636,7 +636,7 @@ export const kaohsiungQiaotouSugarRefinerySpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/興糖車站+橋頭",
     suggestedStayMinutes: 15,
     notes: "糖廠舊鐵道車站遺址，鐵軌與月台承載糖業運輸歷史，是鐵道攝影的熱門取景點。",
-    imagePlaceholder: "/maps/qiaotou-sugar-refinery/g.png",
+    imagePlaceholder: "/maps/qiaotou-sugar-refinery/g.webp",
   },
   {
     id: "qiaotou-H",
@@ -649,7 +649,7 @@ export const kaohsiungQiaotouSugarRefinerySpots: Spot[] = [
     googleMapsUrl: "https://www.google.com/maps/search/鐵園迷城+橋頭糖廠",
     suggestedStayMinutes: 20,
     notes: "以鐵道零件與機械裝置創作的戶外藝術空間，充滿工業風與童趣，適合拍照探索。",
-    imagePlaceholder: "/maps/qiaotou-sugar-refinery/h.png",
+    imagePlaceholder: "/maps/qiaotou-sugar-refinery/h.webp",
   },
 ];
 
@@ -661,4 +661,5 @@ export function getSpotById(
 ): Spot | undefined {
   return spots.find((s) => s.id === id);
 }
+
 
