@@ -7,7 +7,7 @@ function landmarkImage(slug: string): string {
     hsinchu: "hsinchu-county",
     chiayi: "chiayi-county",
   };
-  return `/city-landmarks/${map[slug] ?? slug}.png`;
+  return `/city-landmarks-webp/${map[slug] ?? slug}.png`;
 }
 
 export default function MapPage() {
@@ -50,7 +50,7 @@ export default function MapPage() {
                       alt=""
                       aria-hidden="true"
                       draggable="false"
-                      className="pointer-events-none absolute inset-0 z-0 h-full w-full select-none object-cover opacity-[0.45]"
+                      loading="lazy" decoding="async" className="pointer-events-none absolute inset-0 z-0 h-full w-full select-none object-cover opacity-[0.45]"
                     />
                     {/* White overlay for text readability */}
                     <div className="pointer-events-none absolute inset-0 z-[1] bg-white/42" />
@@ -121,6 +121,7 @@ export default function MapPage() {
     </div>
   );
 }
+
 
 
 
