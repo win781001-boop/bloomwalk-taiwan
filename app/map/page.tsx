@@ -1,6 +1,15 @@
 ﻿import { counties } from "@/lib/counties";
 import SiteHeader from "@/components/SiteHeader";
 
+function landmarkImage(slug: string): string {
+  // two county slugs differ from their filename
+  const map: Record<string, string> = {
+    hsinchu: "hsinchu-county",
+    chiayi: "chiayi-county",
+  };
+  return `/city-landmarks/${map[slug] ?? slug}.png`;
+}
+
 export default function MapPage() {
   return (
     <div className="flex flex-col flex-1">
@@ -22,7 +31,7 @@ export default function MapPage() {
             </div>
 
             {/* 22-county grid */}
-            <div className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
               {counties.map((county) => {
                 const href =
                   county.slug === "kaohsiung"
@@ -33,28 +42,42 @@ export default function MapPage() {
                   <a
                     key={county.slug}
                     href={href}
-                    className="group flex flex-col rounded-2xl border border-bloom-green-light/40 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 sm:p-6"
+                    className="group relative flex flex-col overflow-hidden rounded-2xl border border-bloom-green-light/40 bg-white p-4 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 sm:p-5 md:p-6"
                   >
-                    {/* County name */}
-                    <h2 className="text-lg font-bold tracking-tight text-bloom-text sm:text-xl">
-                      {county.name}
-                    </h2>
-                    <p className="mt-0.5 text-xs text-bloom-text-light/60">
-                      {county.nameEn}
-                    </p>
+                    {/* Landmark background — full card */}
+                    <img
+                      src={landmarkImage(county.slug)}
+                      alt=""
+                      aria-hidden="true"
+                      draggable="false"
+                      className="pointer-events-none absolute inset-0 z-0 h-full w-full select-none object-cover opacity-[0.45]"
+                    />
+                    {/* White overlay for text readability */}
+                    <div className="pointer-events-none absolute inset-0 z-[1] bg-white/42" />
 
-                    {/* Spacer */}
-                    <div className="mt-4 flex items-center gap-2">
-                      <span className="inline-block rounded-full border border-bloom-gold/30 bg-bloom-gold-light/40 px-2.5 py-0.5 text-xs text-bloom-text-light">
-                        骨架建立中
-                      </span>
-                      <span className="text-xs text-bloom-text-light/50">
-                        {county.routeCount} 條路線
-                      </span>
+                    {/* Content wrapper — above the overlay */}
+                    <div className="relative z-[2]">
+                      {/* County name */}
+                      <h2 className="text-xl font-bold tracking-tight text-bloom-text md:text-2xl">
+                        {county.name}
+                      </h2>
+                      <p className="mt-0.5 text-xs text-[#1f3a5f]">
+                        {county.nameEn}
+                      </p>
+
+                      {/* Spacer */}
+                      <div className="mt-4 flex items-center gap-2">
+                        <span className="inline-block rounded-full border border-bloom-gold/30 bg-bloom-gold-light/40 px-2.5 py-0.5 text-xs text-bloom-text-light">
+                          骨架建立中
+                        </span>
+                        <span className="text-xs text-slate-500">
+                          {county.routeCount} 條路線
+                        </span>
+                      </div>
                     </div>
 
-                    {/* Hover CTA */}
-                    <span className="mt-auto flex items-center gap-1 pt-4 text-sm font-medium text-bloom-green transition-all duration-300 group-hover:gap-2">
+                    {/* Hover CTA — outside content wrapper to keep mt-auto in flex */}
+                    <span className="mt-auto flex items-center gap-1 pt-4 text-sm font-medium text-[#1f3a5f] transition-all duration-300 group-hover:gap-2">
                       查看縣市頁面
                       <svg
                         className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5"
@@ -98,3 +121,6 @@ export default function MapPage() {
     </div>
   );
 }
+
+
+
