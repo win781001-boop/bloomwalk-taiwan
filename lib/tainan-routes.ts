@@ -24,6 +24,7 @@ export type TainanRoute = {
   supplies: string[];
   nearbyRoutes: string[];
   mapUrl: string;
+  status?: "draft" | "published";
 };
 
 export const tainanRoutes: TainanRoute[] = [
@@ -74,6 +75,7 @@ export const tainanRoutes: TainanRoute[] = [
     mapUrl: "https://www.google.com/maps/search/赤崁樓+臺南",
   },
   {
+    status: "draft",
     slug: "shennong-haian-hele",
     primaryCategory: "night",
     name: "神農街・海安路・河樂廣場夜間路線",
@@ -120,6 +122,7 @@ export const tainanRoutes: TainanRoute[] = [
     mapUrl: "https://www.google.com/maps/search/奇美博物館+臺南",
   },
   {
+    status: "draft",
     slug: "shuijiaoshe-zhuxi",
     primaryCategory: "park",
     name: "水交社・竹溪水岸・哈赫拿爾森林路線",
@@ -143,6 +146,7 @@ export const tainanRoutes: TainanRoute[] = [
     mapUrl: "https://www.google.com/maps/search/水交社+臺南",
   },
   {
+    status: "draft",
     slug: "blueprint-art-museum",
     primaryCategory: "museum",
     name: "藍晒圖・臺南美術館・孔廟文化路線",
