@@ -1,6 +1,6 @@
 
 import type { Spot } from "@/lib/spot-types";
-import { tainanChimeiSpots } from "@/lib/tainan-spots";
+import { tainanConfuciusSpots } from "@/lib/tainan-spots";
 
 function spotBadge(index: number): string {
   return String.fromCharCode(65 + index);
@@ -70,14 +70,14 @@ function SpotCard({ spot, index }: { spot: Spot; index: number }) {
 }
 
 export function SpotCards({
-  spots = tainanChimeiSpots,
+  spots = tainanConfuciusSpots,
 }: {
   spots?: Spot[];
 }) {
   return (
     <section className="rounded-3xl bg-white p-4 shadow-xl">
       <h2 className="mb-4 text-lg font-bold text-slate-800">
-        奇美博物館景點卡
+        孔廟文化景點卡
       </h2>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         {spots.map((spot, i) => (
